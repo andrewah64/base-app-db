@@ -1,0 +1,3 @@
+revoke usage on schema web_core_unauth_oidc_call_inf from role_web_core_unauth_oidc_call_inf;
+
+drop role if exists role_web_core_unauth_oidc_call_inf;

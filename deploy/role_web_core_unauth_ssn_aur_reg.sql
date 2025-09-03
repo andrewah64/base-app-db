@@ -1,0 +1,3 @@
+create role role_web_core_unauth_ssn_aur_reg nologin;
+
+grant usage on schema web_core_unauth_ssn_aur_reg to role_web_core_unauth_ssn_aur_reg;

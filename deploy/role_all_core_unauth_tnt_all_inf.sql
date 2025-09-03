@@ -1,0 +1,3 @@
+create role role_all_core_unauth_tnt_all_inf nologin;
+
+grant usage on schema all_core_unauth_tnt_all_inf to role_all_core_unauth_tnt_all_inf;

@@ -1,0 +1,3 @@
+revoke usage on schema web_core_unauth_oidc_callback_mod from role_web_core_unauth_oidc_callback_mod;
+
+drop role if exists role_web_core_unauth_oidc_callback_mod;

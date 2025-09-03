@@ -1,2 +1,4 @@
-# base-app-db
-DB definitions for the base-app-client web application starter
+# base_app_db
+DB defintiions for the starter web application
+
+Deployable through sqitch.

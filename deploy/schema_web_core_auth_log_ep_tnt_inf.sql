@@ -1,0 +1,1 @@
+create schema if not exists web_core_auth_log_ep_tnt_inf authorization base_owner;

@@ -1,0 +1,3 @@
+create role role_web_core_unauth_oidc_callback_mod nologin;
+
+grant usage on schema web_core_unauth_oidc_callback_mod to role_web_core_unauth_oidc_callback_mod;

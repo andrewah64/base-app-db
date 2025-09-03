@@ -1,0 +1,5 @@
+create role role_web_core_auth_ssn_aur_inf nologin;
+
+grant usage on schema web_core_auth_ssn_aur_inf to role_web_core_auth_ssn_aur_inf;
+
+grant role_web_core_unauth_ssn_aur_reg to role_web_core_auth_ssn_aur_inf with inherit true;

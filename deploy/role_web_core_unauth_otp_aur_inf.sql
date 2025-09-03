@@ -1,0 +1,3 @@
+create role role_web_core_unauth_otp_aur_inf nologin;
+
+grant usage on schema web_core_unauth_otp_aur_inf to role_web_core_unauth_otp_aur_inf;

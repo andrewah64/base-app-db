@@ -1,0 +1,3 @@
+create role role_web_core_unauth_rts_web_inf nologin;
+
+grant usage on schema web_core_unauth_rts_web_inf to role_web_core_unauth_rts_web_inf;

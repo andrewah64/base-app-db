@@ -1,0 +1,3 @@
+create role role_web_core_unauth_ssn_ep_inf nologin;
+
+grant usage on schema web_core_unauth_ssn_ep_inf to role_web_core_unauth_ssn_ep_inf;
