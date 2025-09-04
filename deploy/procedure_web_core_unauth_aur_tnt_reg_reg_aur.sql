@@ -546,11 +546,11 @@ begin
              )
         select
                c_aur_id
-             , ep.ep_id
+             , aep.ep_id
              , lvl.lvl_id
           from
-                          app_data.endpoint  ep
-               cross join app_data.log_level lvl
+                          app_data.atn_endpoint aep
+               cross join app_data.log_level    lvl
          where
                lvl.lvl_aur_dflt = true
              ;
