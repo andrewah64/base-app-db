@@ -127,6 +127,8 @@ table_passkey_discoverable_credential                        2025-09-02T13:21:42
 table_passkey_hint                                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_passkey_public_key_algorithm                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_passkey_user_verification                              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+table_saml2_identity_provider                                2025-09-03T20:46:11Z AH <xxx@gmail.com> # SAML2 IDP info
+table_saml2_service_provider                                 2025-09-03T20:45:59Z AH <xxx@gmail.com> # SAML2 SP info
 table_tenant                                                 2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_web_app_user                                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_web_app_user_atn_method                                2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -184,6 +186,8 @@ constraints_oidc_client                                      2025-09-02T13:21:42
 constraints_oidc_client_provider_scope                       2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 constraints_oidc_provider_scope                              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 constraints_page_endpoint                                    2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+constraints_saml2_identity_provider                          2025-09-07T20:08:40Z AH <xxx@gmail.com> # SAML2 IDP
+constraints_saml2_service_provider                           2025-09-07T20:08:35Z AH <xxx@gmail.com> # SAML2 SP
 constraints_web_app_user                                     2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 constraints_web_app_user_atn_method                          2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 constraints_web_app_user_home_page                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
