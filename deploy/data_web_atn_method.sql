@@ -18,4 +18,22 @@ begin
           from app_data.atn_method
          where aum_nm in ('Passkey');
 
+        insert into app_data.web_atn_method (aum_id, wam_s2i)
+        select aum_id
+             , true
+          from app_data.atn_method
+         where aum_nm in ('SAML2 : IdP initiated');
+
+        insert into app_data.web_atn_method (aum_id, wam_s2s)
+        select aum_id
+             , true
+          from app_data.atn_method
+         where aum_nm in ('SAML2 : SP initiated');
+
+        insert into app_data.web_atn_method (aum_id, wam_s2u)
+        select aum_id
+             , true
+          from app_data.atn_method
+         where aum_nm in ('SAML2 : SP initiated (username)');
+
 end $$

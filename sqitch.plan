@@ -147,9 +147,11 @@ table_web_app_user_passkey_login_session                     2025-09-02T13:21:42
 table_web_app_user_passkey_registration_session              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_web_app_user_password                                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_web_app_user_password_config                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+table_web_app_user_saml2_config                              2025-09-08T13:15:36Z AH <xxx@gmail.com> # SAML2 config
 table_web_app_user_totp                                      2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_web_app_user_totp_nonce                                2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_web_atn_method                                         2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+table_web_atn_saml2_method                                   2025-09-08T13:21:33Z AH <xxx@gmail.com> # SAML2 auth methods
 table_web_db_role                                            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 indices_api_atn_method                                       2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 indices_app_data_home_page                                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -206,8 +208,10 @@ constraints_web_app_user_passkey_config_public_key_algorithm 2025-09-02T13:21:42
 constraints_web_app_user_passkey_config_registration_hint    2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 constraints_web_app_user_passkey_login_session               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 constraints_web_app_user_passkey_registration_session        2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+constraints_web_app_user_saml2_config                        2025-09-08T13:17:16Z AH <xxx@gmail.com> # SAML2 config
 constraints_web_app_user_totp_nonce                          2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 constraints_web_atn_method                                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+constraints_web_atn_saml2_method                             2025-09-08T13:58:21Z AH <xxx@gmail.com> # SAML2 auth methods
 constraints_web_db_role                                      2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 data_tenant                                                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 data_web_app_user_password_config                            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -236,6 +240,7 @@ data_passkey_user_verification                               2025-09-02T13:21:42
 data_passkey_public_key_algorithm                            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 data_web_app_user_passkey_config                             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 data_passkey_authenticator_transport                         2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+data_web_atn_saml2_method                                    2025-09-08T13:22:03Z AH <xxx@gmail.com> # SAML2 config
 function_all_core_unauth_tnt_all_inf_tnt_inf                 2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_api_core_key_aur_lgn_aur_inf                        2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_api_core_rts_api_inf_rts_inf                        2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit

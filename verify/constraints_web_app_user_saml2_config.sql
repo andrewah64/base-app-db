@@ -3,12 +3,12 @@ begin
         assert(select true
                  from information_schema.constraint_table_usage
                 where table_schema    = 'app_data'
-                  and table_name      = 'language'
-                  and constraint_name = 'fk_aur_lng');
+                  and table_name      = 'tenant'
+                  and constraint_name = 'fk_s2c_tnt');
 
         assert(select true
                  from information_schema.constraint_table_usage
                 where table_schema    = 'app_data'
-                  and table_name      = 'tenant'
-                  and constraint_name = 'fk_aur_tnt');
+                  and table_name      = 'web_atn_saml2_method'
+                  and constraint_name = 'fk_s2c_aum');
 end $$
