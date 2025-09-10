@@ -350,17 +350,14 @@ data_passkey_attachment                                      2025-09-02T13:21:42
 data_passkey_attestation                                     2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 data_passkey_discoverable_credential                         2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 data_passkey_user_verification                               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-data_endpoints                                               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-data_tenants                                                 2025-09-10T19:18:58Z AH <xxx@gmail.com> # Add tenants via proc
-data_language                                                2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-data_api                                                     2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-data_api_endpoint                                            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 data_oidc_scope                                              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 data_oidc_provider                                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 data_oidc_provider_scope                                     2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+data_language                                                2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+data_api                                                     2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+data_api_endpoint                                            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 data_passkey_hint                                            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 data_passkey_public_key_algorithm                            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 data_passkey_authenticator_transport                         2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-data_oidc_client                                             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-data_oidc_client_provider_scope                              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-role_superuser                                               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+data_endpoints                                               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+data_tenants                                                 2025-09-10T19:18:58Z AH <xxx@gmail.com> # Add tenants via proc

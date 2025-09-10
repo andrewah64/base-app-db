@@ -11,6 +11,7 @@ declare
 
         v_tnt_id app_data.tenant.tnt_id%type    := 0;
         v_grp_id app_data.app_group.grp_id%type := 0;
+        v_lng_id app_data.language.lng_id%type  := 0;
 
 begin
 
@@ -178,6 +179,84 @@ begin
                tnt.tnt_id      = v_tnt_id
            and lvl.lvl_ep_dflt = true
              ;
+
+        insert
+          into
+               app_data.oidc_client
+             (
+                 tnt_id
+             ,   ocp_id
+             ,   occ_url
+             ,   occ_client_id
+             ,   occ_client_secret
+             ,   ep_id
+             )
+        select
+               tnt.tnt_id
+             , ocp.ocp_id
+             , '<placeholder-' || ocp.ocp_nm::text || '-' || v_tnt_id::text ||'>'
+             , '<placeholder-' || ocp.ocp_nm::text || '-' || v_tnt_id::text ||'>'
+             , '<placeholder-' || ocp.ocp_nm::text || '-' || v_tnt_id::text ||'>'
+             , ep.ep_id
+          from
+                          app_data.tenant        tnt
+               cross join app_data.oidc_provider ocp
+               cross join (
+                                   app_data.endpoint      ep
+                              join app_data.endpoint_path epp on ep.epp_id = epp.epp_id
+                          )
+         where
+               tnt.tnt_id = v_tnt_id
+           and epp.epp_pt = '/web/core/oidc/callback/{nm}'
+             ;
+
+        insert
+          into
+               app_data.oidc_client_provider_scope
+               (
+                   occ_id
+               ,   ocp_id
+               ,   ocs_id
+               )
+          select
+                 occ.occ_id
+               , ocps.ocp_id
+               , ocps.ocs_id
+            from
+                            app_data.oidc_client         occ
+                 cross join app_data.oidc_provider_scope ocps
+           where
+                 occ.tnt_id = v_tnt_id
+             and not exists (
+                                select
+                                       null
+                                  from
+                                       app_data.oidc_client_provider_scope occps
+                                 where
+                                       occps.occ_id = occ.occ_id
+                                   and occps.ocp_id = ocps.ocp_id
+                                   and occps.ocs_id = ocps.ocs_id
+                            );
+
+        select
+               lng.lng_id
+                          into
+                               v_lng_id
+          from
+               app_data.language lng
+         where
+               lng.lng_aur_dflt = true
+             ;
+
+        call web_core_auth_aur_tnt_reg.reg_aur
+        (
+            p_tnt_id     => v_tnt_id
+        ,   p_grp_id     => v_grp_id
+        ,   p_aur_nm     => 'superuser'
+        ,   p_aur_hsh_pw => '$2a$10$wE2aVRUCinnDOqEOMApSHuEFh6yEG0FKRb1x5z.MkDlF.Uw9XtFQ6'
+        ,   p_lng_id     => v_lng_id
+        ,   p_by         => current_user
+        );
 
 end;
 $$
