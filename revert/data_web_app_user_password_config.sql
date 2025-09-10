@@ -1,5 +1,0 @@
-do $$
-begin
-        delete from app_data.web_app_user_password_config;
-        commit;
-end $$
