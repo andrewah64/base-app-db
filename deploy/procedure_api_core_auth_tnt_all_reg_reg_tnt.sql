@@ -158,6 +158,27 @@ begin
                                  and grpdr.dbrl_id = adr.dbrl_id
                           );
 
+        insert
+          into
+               app_data.endpoint_log_level
+             (
+                 tnt_id
+             ,   ep_id
+             ,   lvl_id
+             )
+        select
+               tnt.tnt_id
+             , ep.ep_id
+             , lvl.lvl_id
+          from
+                          app_data.tenant    tnt
+               cross join app_data.log_level lvl
+               cross join app_data.endpoint  ep
+         where
+               tnt.tnt_id      = v_tnt_id
+           and lvl.lvl_ep_dflt = true
+             ;
+
 end;
 $$
 language plpgsql

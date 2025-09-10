@@ -249,33 +249,6 @@ begin
 
         end if;
 
-        insert
-          into
-               app_data.endpoint_log_level
-             (
-                 tnt_id
-             ,   ep_id
-             ,   lvl_id
-             )
-        select
-               tnt.tnt_id
-             , v_ep_id
-             , lvl.lvl_id
-          from
-                          app_data.tenant    tnt
-               cross join app_data.log_level lvl
-         where
-               lvl.lvl_ep_dflt = true
-           and not exists (
-                              select
-                                     null
-                                from
-                                     app_data.endpoint_log_level ell
-                               where
-                                     ell.tnt_id = tnt.tnt_id
-                                 and ell.ep_id  = v_ep_id
-                          );
-
         if p_pg_nm is not null then
 
                 insert

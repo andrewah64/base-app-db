@@ -1,5 +1,7 @@
 do $$
 begin
+        delete from app_data.endpoint_log_level;
+
         delete from app_data.app_group_db_role;
 
         delete from app_data.app_group;

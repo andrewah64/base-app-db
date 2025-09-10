@@ -2,9 +2,9 @@ create table if not exists app_data.web_app_user_password_config
 (
         tnt_id               bigint                                        not null
 ,       aupc_aur_nm_min_len  int                      default 1            not null
-,       aupc_aur_nm_max_len  int                      default 1            not null
+,       aupc_aur_nm_max_len  int                      default 10           not null
 ,       aupc_aur_pwd_min_len int                      default 1            not null
-,       aupc_aur_pwd_max_len int                      default 1            not null
+,       aupc_aur_pwd_max_len int                      default 10           not null
 ,       aupc_aur_pwd_inc_sym boolean                  default true         not null
 ,       aupc_aur_pwd_inc_num boolean                  default true         not null
 ,       aupc_enabled         boolean                  default true         not null
