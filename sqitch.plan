@@ -4,6 +4,7 @@
 
 role_base_owner                                              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_all_core_unauth_ep_all_reg                            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+schema_all_core_unauth_spc_all_reg                           2025-09-11T10:18:00Z AH <xxx@gmail.com> # Gen key pairs at startup
 schema_all_core_unauth_tnt_all_inf                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_api_core_auth_tnt_all_reg                             2025-09-10T19:30:29Z AH <xxx@gmail.com> # Add tenants
 schema_api_core_aur_tnt_reg                                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -46,6 +47,7 @@ schema_web_core_unauth_otp_aur_inf                           2025-09-02T13:21:42
 schema_web_core_unauth_otp_aur_mod                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_unauth_otp_ssn_aur_mod                       2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_unauth_ssn_ep_inf                            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+role_all_core_unauth_spc_all_reg                             2025-09-11T10:17:42Z AH <xxx@gmail.com> # Generate key keys at startup
 role_all_core_unauth_tnt_all_inf                             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_api_core_auth_tnt_all_reg                               2025-09-10T19:30:37Z AH <xxx@gmail.com> # Add tenants
 role_api_core_aur_tnt_reg                                    2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -198,6 +200,7 @@ constraints_saml2_identity_provider                          2025-09-07T20:08:40
 constraints_saml2_identity_provider_metadata_endpoint        2025-09-08T12:43:18Z AH <xxx@gmail.com> # IDP Metadata endpoints
 constraints_saml2_identity_provider_slo_endpoint             2025-09-07T20:29:58Z AH <xxx@gmail.com> # IDP SLO endpoint
 constraints_saml2_identity_provider_sso_endpoint             2025-09-07T20:30:09Z AH <xxx@gmail.com> # IDP SSL endpoint
+constraints_saml2_service_provider_certificate_pair          2025-09-11T07:57:44Z AH <xxx@gmail.com> # SAML2 SP certs
 constraints_web_app_user                                     2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 constraints_web_app_user_atn_method                          2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 constraints_web_app_user_home_page                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -215,6 +218,7 @@ constraints_web_app_user_totp_nonce                          2025-09-02T13:21:42
 constraints_web_atn_method                                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 constraints_web_atn_saml2_method                             2025-09-08T13:58:21Z AH <xxx@gmail.com> # SAML2 auth methods
 constraints_web_db_role                                      2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+function_all_core_unauth_spc_all_reg_s2c_inf                 2025-09-11T10:20:17Z AH <xxx@gmail.com> # Gen key pairs at startup
 function_all_core_unauth_tnt_all_inf_tnt_inf                 2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_api_core_key_aur_lgn_aur_inf                        2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_api_core_rts_api_inf_rts_inf                        2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -297,6 +301,7 @@ function_web_core_unauth_ssn_aur_reg_pls_inf                 2025-09-02T13:21:42
 function_web_core_unauth_ssn_aur_reg_pwd_inf                 2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_unauth_ssn_ep_inf_ep_inf                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_all_core_unauth_ep_all_reg_reg_ep                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+procedure_all_core_unauth_spc_all_reg_reg_spc                2025-09-11T10:20:49Z AH <xxx@gmail.com> # Gen key pairs at startup
 procedure_api_core_auth_tnt_all_reg_reg_tnt                  2025-09-10T19:31:57Z AH <xxx@gmail.com> # Register tenant
 procedure_web_core_auth_atn_tnt_mod_del_idp                  2025-09-09T17:01:28Z AH <xxx@gmail.com> # Modify IDPs config
 procedure_web_core_auth_atn_tnt_mod_mod_aukc                 2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit

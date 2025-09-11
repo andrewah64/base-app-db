@@ -43,6 +43,7 @@ begin
                (
                    tnt_id
                ,   aum_id
+               ,   s2c_entity_id
                ,   s2c_crt_dn
                ,   s2c_crt_cn
                ,   s2c_crt_org
@@ -50,17 +51,22 @@ begin
         select
                v_tnt_id
              , asm.aum_id
+             , tnt.tnt_prtc || '://' || tnt.tnt_fqdn || case tnt.tnt_port::text
+                                                            when '443' then ''
+                                                            when '80'  then ''
+                                                            else ':' || tnt.tnt_port::text
+                                                        end
              , interval '1 year'
              , tnt.tnt_prtc || '://' || tnt.tnt_fqdn || case tnt.tnt_port::text
                                                             when '443' then ''
                                                             when '80'  then ''
                                                             else ':' || tnt.tnt_port::text
-                                                        end 
+                                                        end
              , tnt.tnt_prtc || '://' || tnt.tnt_fqdn || case tnt.tnt_port::text
                                                             when '443' then ''
                                                             when '80'  then ''
                                                             else ':' || tnt.tnt_port::text
-                                                        end 
+                                                        end
           from
                           app_data.tenant               tnt
                cross join app_data.web_atn_saml2_method asm
