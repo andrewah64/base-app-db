@@ -46,6 +46,7 @@ schema_web_core_unauth_aur_tnt_reg                           2025-09-02T13:21:42
 schema_web_core_unauth_otp_aur_inf                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_unauth_otp_aur_mod                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_unauth_otp_ssn_aur_mod                       2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+schema_web_core_unauth_spc_tnt_inf                           2025-09-11T15:27:38Z AH <xxx@gmail.com> # SAML2 metadata
 schema_web_core_unauth_ssn_ep_inf                            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_all_core_unauth_spc_all_reg                             2025-09-11T10:17:42Z AH <xxx@gmail.com> # Generate key keys at startup
 role_all_core_unauth_tnt_all_inf                             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -87,6 +88,7 @@ role_web_core_unauth_otp_aur_inf                             2025-09-02T13:21:42
 role_web_core_unauth_otp_aur_mod                             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_web_core_unauth_otp_ssn_aur_mod                         2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_web_core_unauth_rts_web_inf                             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+role_web_core_unauth_spc_tnt_inf                             2025-09-11T15:27:47Z AH <xxx@gmail.com> # SAML2 metadata
 role_web_core_unauth_ssn_ep_inf                              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_api                                                    2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_api_app_user                                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -291,6 +293,7 @@ function_web_core_unauth_otp_aur_inf_otp_aur_inf             2025-09-02T13:21:42
 function_web_core_unauth_otp_aur_mod_otp_inf                 2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_unauth_otp_ssn_aur_mod_aur_inf             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_unauth_otp_ssn_aur_mod_nnc_inf             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+function_web_core_unauth_spc_tnt_inf_spc_inf                 2025-09-11T15:28:46Z AH <xxx@gmail.com> # SAML2 metadata
 function_web_core_unauth_ssn_aur_reg_aukc_atn_inf            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_unauth_ssn_aur_reg_aum_inf                 2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_unauth_ssn_aur_reg_aur_pky_inf             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit

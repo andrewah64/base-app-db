@@ -65,6 +65,36 @@ begin
 
         call all_core_unauth_ep_all_reg.reg_ep
         (
+                p_dbrl_nm   => 'role_web_core_unauth_spc_tnt_inf'
+        ,       p_dbrl_ds   => 'View SAML2 metadata'
+        ,       p_dbrl_md   => false
+        ,       p_dbrl_type => 'web'
+        ,       p_hdlr_nm   => 'web.core.unauth.spc.tnt.Get'
+        ,       p_epp_pt    => '/web/core/unauth/saml2/metadata'
+        ,       p_ep_ds     => 'Screen: SAML2 metadata'
+        ,       p_mwc_nm    => 'web/unauth'
+        ,       p_hrm_nm    => 'GET'
+        ,       p_pg_nm     => 'SAML2 metadata'
+        ,       pe_is_entry => true
+        );
+
+        call all_core_unauth_ep_all_reg.reg_ep
+        (
+                p_dbrl_nm   => 'role_web_core_unauth_spc_tnt_inf'
+        ,       p_dbrl_ds   => 'SAML2 ACS'
+        ,       p_dbrl_md   => false
+        ,       p_dbrl_type => 'web'
+        ,       p_hdlr_nm   => '???'
+        ,       p_epp_pt    => '/web/core/unauth/saml2/acs'
+        ,       p_ep_ds     => 'Action: manage IDP requests'
+        ,       p_mwc_nm    => 'web/unauth'
+        ,       p_hrm_nm    => 'POST'
+        ,       p_pg_nm     => 'SAML2 metadata'
+        ,       pe_is_entry => false
+        );
+
+        call all_core_unauth_ep_all_reg.reg_ep
+        (
                 p_dbrl_nm   => 'role_web_core_unauth_oidc_call_inf'
         ,       p_dbrl_ds   => 'Get OIDC provider information'
         ,       p_dbrl_md   => false

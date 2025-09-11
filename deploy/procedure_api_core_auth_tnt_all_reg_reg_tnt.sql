@@ -47,32 +47,33 @@ begin
                ,   s2c_crt_dn
                ,   s2c_crt_cn
                ,   s2c_crt_org
+               ,   ep_id
                )
         select
-               v_tnt_id
-             , asm.aum_id
+               tnt.tnt_id                                                                  tnt_id
+             , asm.aum_id                                                                  aum_id
              , tnt.tnt_prtc || '://' || tnt.tnt_fqdn || case tnt.tnt_port::text
                                                             when '443' then ''
                                                             when '80'  then ''
                                                             else ':' || tnt.tnt_port::text
-                                                        end
-             , interval '1 year'
-             , tnt.tnt_prtc || '://' || tnt.tnt_fqdn || case tnt.tnt_port::text
-                                                            when '443' then ''
-                                                            when '80'  then ''
-                                                            else ':' || tnt.tnt_port::text
-                                                        end
-             , tnt.tnt_prtc || '://' || tnt.tnt_fqdn || case tnt.tnt_port::text
-                                                            when '443' then ''
-                                                            when '80'  then ''
-                                                            else ':' || tnt.tnt_port::text
-                                                        end
+                                                        end                                s2c_entity_id
+             , interval '5 year'                                                           s2c_crt_dn
+             , tnt.tnt_fqdn                                                                s2c_crt_cn
+             , tnt.tnt_nm                                                                  s2c_crt_org
+             , ep.ep_id                                                                    ep_id
           from
                           app_data.tenant               tnt
                cross join app_data.web_atn_saml2_method asm
+               cross join (
+                                   app_data.endpoint            ep
+                              join app_data.endpoint_path       epp on ep.epp_id = epp.epp_id
+                              join app_data.http_request_method hrm on ep.hrm_id = hrm.hrm_id
+                          )
          where
                tnt.tnt_id       = v_tnt_id
            and asm.asm_s2c_dflt = true
+           and epp.epp_pt       = '/web/core/unauth/saml2/acs'
+           and hrm.hrm_nm       = 'POST'
              ;
 
         insert
