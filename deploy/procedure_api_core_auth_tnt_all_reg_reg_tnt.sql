@@ -57,7 +57,7 @@ begin
                                                             when '80'  then ''
                                                             else ':' || tnt.tnt_port::text
                                                         end                                s2c_entity_id
-             , interval '5 year'                                                           s2c_crt_dn
+             , interval '1 year'                                                           s2c_crt_dn
              , tnt.tnt_fqdn                                                                s2c_crt_cn
              , tnt.tnt_nm                                                                  s2c_crt_org
              , ep.ep_id                                                                    ep_id

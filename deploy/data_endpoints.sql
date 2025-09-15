@@ -485,31 +485,121 @@ begin
 
         call all_core_unauth_ep_all_reg.reg_ep
         (
-                p_dbrl_nm   => 'role_web_core_auth_atn_tnt_inf'
-        ,       p_dbrl_ds   => 'View authentication configuration'
+                p_dbrl_nm   => 'role_web_core_auth_aukc_tnt_inf'
+        ,       p_dbrl_ds   => 'View username/password configuration'
         ,       p_dbrl_md   => false
         ,       p_dbrl_type => 'web'
-        ,       p_hdlr_nm   => 'web.core.auth.atn.tnt.Get'
-        ,       p_epp_pt    => '/web/core/auth/atn/tnt'
-        ,       p_ep_ds     => 'Screen: authentication configuration management'
+        ,       p_hdlr_nm   => 'web.core.auth.aukc.tnt.Get'
+        ,       p_epp_pt    => '/web/core/auth/aukc/tnt'
+        ,       p_ep_ds     => 'Screen: username/password configuration management'
         ,       p_mwc_nm    => 'web/auth'
         ,       p_hrm_nm    => 'GET'
-        ,       p_pg_nm     => 'Manage authentication configuration'
+        ,       p_pg_nm     => 'Manage username/password configuration'
         ,       pe_is_entry => true
         );
 
         call all_core_unauth_ep_all_reg.reg_ep
         (
-                p_dbrl_nm   => 'role_web_core_auth_atn_tnt_mod'
-        ,       p_dbrl_ds   => 'Manage authentication configuration'
+                p_dbrl_nm   => 'role_web_core_auth_aukc_tnt_mod'
+        ,       p_dbrl_ds   => 'Manage username/password configuration'
         ,       p_dbrl_md   => false
         ,       p_dbrl_type => 'web'
-        ,       p_hdlr_nm   => 'web.core.auth.atn.tnt.Patch'
-        ,       p_epp_pt    => '/web/core/auth/atn/tnt/{nm}/{id...}'
-        ,       p_ep_ds     => 'Action: modify authentication configuration'
+        ,       p_hdlr_nm   => 'web.core.auth.aukc.tnt.Patch'
+        ,       p_epp_pt    => '/web/core/auth/aukc/tnt'
+        ,       p_ep_ds     => 'Screen: username/password configuration management'
         ,       p_mwc_nm    => 'web/auth'
         ,       p_hrm_nm    => 'PATCH'
-        ,       p_pg_nm     => 'Manage authentication configuration'
+        ,       p_pg_nm     => 'Manage username/password configuration'
+        ,       pe_is_entry => false
+        );
+
+        call all_core_unauth_ep_all_reg.reg_ep
+        (
+                p_dbrl_nm   => 'role_web_core_auth_aupc_tnt_inf'
+        ,       p_dbrl_ds   => 'View passkey configuration'
+        ,       p_dbrl_md   => false
+        ,       p_dbrl_type => 'web'
+        ,       p_hdlr_nm   => 'web.core.auth.aupc.tnt.Get'
+        ,       p_epp_pt    => '/web/core/auth/aupc/tnt'
+        ,       p_ep_ds     => 'Screen: passkey configuration management'
+        ,       p_mwc_nm    => 'web/auth'
+        ,       p_hrm_nm    => 'GET'
+        ,       p_pg_nm     => 'Manage passkey configuration'
+        ,       pe_is_entry => true
+        );
+
+        call all_core_unauth_ep_all_reg.reg_ep
+        (
+                p_dbrl_nm   => 'role_web_core_auth_aupc_tnt_mod'
+        ,       p_dbrl_ds   => 'Manage passkey configuration'
+        ,       p_dbrl_md   => false
+        ,       p_dbrl_type => 'web'
+        ,       p_hdlr_nm   => 'web.core.auth.aupc.tnt.Patch'
+        ,       p_epp_pt    => '/web/core/auth/aupc/tnt'
+        ,       p_ep_ds     => 'Screen: passkey configuration management'
+        ,       p_mwc_nm    => 'web/auth'
+        ,       p_hrm_nm    => 'PATCH'
+        ,       p_pg_nm     => 'Manage passkey configuration'
+        ,       pe_is_entry => false
+        );
+
+        call all_core_unauth_ep_all_reg.reg_ep
+        (
+                p_dbrl_nm   => 'role_web_core_auth_occ_tnt_inf'
+        ,       p_dbrl_ds   => 'View OIDC configuration'
+        ,       p_dbrl_md   => false
+        ,       p_dbrl_type => 'web'
+        ,       p_hdlr_nm   => 'web.core.auth.occ.tnt.Get'
+        ,       p_epp_pt    => '/web/core/auth/occ/tnt'
+        ,       p_ep_ds     => 'Screen: OIDC configuration management'
+        ,       p_mwc_nm    => 'web/auth'
+        ,       p_hrm_nm    => 'GET'
+        ,       p_pg_nm     => 'Manage OIDC configuration'
+        ,       pe_is_entry => true
+        );
+
+        call all_core_unauth_ep_all_reg.reg_ep
+        (
+                p_dbrl_nm   => 'role_web_core_auth_occ_tnt_mod'
+        ,       p_dbrl_ds   => 'Manage OIDC configuration'
+        ,       p_dbrl_md   => false
+        ,       p_dbrl_type => 'web'
+        ,       p_hdlr_nm   => 'web.core.auth.occ.tnt.Patch'
+        ,       p_epp_pt    => '/web/core/auth/occ/tnt/{id}'
+        ,       p_ep_ds     => 'Screen: OIDC configuration management'
+        ,       p_mwc_nm    => 'web/auth'
+        ,       p_hrm_nm    => 'PATCH'
+        ,       p_pg_nm     => 'Manage OIDC configuration'
+        ,       pe_is_entry => false
+        );
+
+        call all_core_unauth_ep_all_reg.reg_ep
+        (
+                p_dbrl_nm   => 'role_web_core_auth_s2c_tnt_inf'
+        ,       p_dbrl_ds   => 'View SAML2 configuration'
+        ,       p_dbrl_md   => false
+        ,       p_dbrl_type => 'web'
+        ,       p_hdlr_nm   => 'web.core.auth.s2c.tnt.Get'
+        ,       p_epp_pt    => '/web/core/auth/s2c/tnt'
+        ,       p_ep_ds     => 'Screen: SAML2 configuration management'
+        ,       p_mwc_nm    => 'web/auth'
+        ,       p_hrm_nm    => 'GET'
+        ,       p_pg_nm     => 'Manage SAML2 configuration'
+        ,       pe_is_entry => true
+        );
+
+        call all_core_unauth_ep_all_reg.reg_ep
+        (
+                p_dbrl_nm   => 'role_web_core_auth_s2c_tnt_mod'
+        ,       p_dbrl_ds   => 'Manage SAML2 configuration'
+        ,       p_dbrl_md   => false
+        ,       p_dbrl_type => 'web'
+        ,       p_hdlr_nm   => 'web.core.auth.s2c.tnt.Patch'
+        ,       p_epp_pt    => '/web/core/auth/s2c/tnt'
+        ,       p_ep_ds     => 'Screen: SAML2 configuration management'
+        ,       p_mwc_nm    => 'web/auth'
+        ,       p_hrm_nm    => 'PATCH'
+        ,       p_pg_nm     => 'Manage SAML2 configuration'
         ,       pe_is_entry => false
         );
 

@@ -12,8 +12,10 @@ schema_api_core_key_aur_lgn                                  2025-09-02T13:21:42
 schema_api_core_rts_api_inf                                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_app_data                                              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_public                                                2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-schema_web_core_auth_atn_tnt_inf                             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-schema_web_core_auth_atn_tnt_mod                             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+schema_web_core_auth_aukc_tnt_inf                            2025-09-15T14:49:19Z AH <xxx@gmail.com> # Un/Pw config
+schema_web_core_auth_aukc_tnt_mod                            2025-09-15T14:49:31Z AH <xxx@gmail.com> # Un/Pw config
+schema_web_core_auth_aupc_tnt_mod                            2025-09-15T14:49:40Z AH <xxx@gmail.com> # Passkey config
+schema_web_core_auth_aupc_tnt_inf                            2025-09-15T14:49:45Z AH <xxx@gmail.com> # Passkey config
 schema_web_core_auth_aur_grp_tnt_inf                         2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_auth_aur_grp_tnt_mod                         2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_auth_aur_tnt_del                             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -30,10 +32,14 @@ schema_web_core_auth_log_aur_tnt_inf                         2025-09-02T13:21:42
 schema_web_core_auth_log_aur_tnt_mod                         2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_auth_log_ep_tnt_inf                          2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_auth_log_ep_tnt_mod                          2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+schema_web_core_auth_occ_tnt_inf                             2025-09-15T14:50:05Z AH <xxx@gmail.com> # OIDC config
+schema_web_core_auth_occ_tnt_mod                             2025-09-15T14:50:09Z AH <xxx@gmail.com> # OIDC config
 schema_web_core_auth_pwd_aur_tnt_mod                         2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_auth_rol_aur_tnt_mod                         2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_auth_rol_grp_tnt_inf                         2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_auth_rol_grp_tnt_mod                         2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+schema_web_core_auth_s2c_tnt_inf                             2025-09-15T14:50:25Z AH <xxx@gmail.com> # SAML2 config
+schema_web_core_auth_s2c_tnt_mod                             2025-09-15T14:50:31Z AH <xxx@gmail.com> # SAML2 config
 schema_web_core_auth_ssn_aur_end                             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_unauth_ssn_aur_reg                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_auth_ssn_aur_inf                             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -54,8 +60,10 @@ role_api_core_auth_tnt_all_reg                               2025-09-10T19:30:37
 role_api_core_aur_tnt_reg                                    2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_api_core_key_aur_lgn                                    2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_api_core_rts_api_inf                                    2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-role_web_core_auth_atn_tnt_inf                               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-role_web_core_auth_atn_tnt_mod                               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+role_web_core_auth_aukc_tnt_inf                              2025-09-15T17:03:06Z AH <xxx@gmail.com> # Un/Pw config
+role_web_core_auth_aukc_tnt_mod                              2025-09-15T17:03:14Z AH <xxx@gmail.com> # Un/Pw config
+role_web_core_auth_aupc_tnt_inf                              2025-09-15T17:03:26Z AH <xxx@gmail.com> # Passkey config
+role_web_core_auth_aupc_tnt_mod                              2025-09-15T17:03:30Z AH <xxx@gmail.com> # Passkey config
 role_web_core_auth_aur_grp_tnt_inf                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_web_core_auth_aur_grp_tnt_mod                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_web_core_auth_aur_tnt_del                               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -72,6 +80,8 @@ role_web_core_auth_log_aur_tnt_inf                           2025-09-02T13:21:42
 role_web_core_auth_log_aur_tnt_mod                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_web_core_auth_log_ep_tnt_inf                            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_web_core_auth_log_ep_tnt_mod                            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+role_web_core_auth_occ_tnt_inf                               2025-09-15T17:03:42Z AH <xxx@gmail.com> # OIDC config
+role_web_core_auth_occ_tnt_mod                               2025-09-15T17:03:46Z AH <xxx@gmail.com> # OIDC config
 role_web_core_auth_pwd_aur_tnt_mod                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_web_core_auth_rol_aur_tnt_mod                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_web_core_auth_rol_grp_tnt_inf                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -88,6 +98,8 @@ role_web_core_unauth_otp_aur_inf                             2025-09-02T13:21:42
 role_web_core_unauth_otp_aur_mod                             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_web_core_unauth_otp_ssn_aur_mod                         2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_web_core_unauth_rts_web_inf                             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+role_web_core_auth_s2c_tnt_inf                               2025-09-15T17:03:58Z AH <xxx@gmail.com> # SAML2 config
+role_web_core_auth_s2c_tnt_mod                               2025-09-15T17:04:02Z AH <xxx@gmail.com> # SAML2 config
 role_web_core_unauth_spc_tnt_inf                             2025-09-11T15:27:47Z AH <xxx@gmail.com> # SAML2 metadata
 role_web_core_unauth_ssn_ep_inf                              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_api                                                    2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -224,19 +236,14 @@ function_all_core_unauth_spc_all_reg_s2c_inf                 2025-09-11T10:20:17
 function_all_core_unauth_tnt_all_inf_tnt_inf                 2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_api_core_key_aur_lgn_aur_inf                        2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_api_core_rts_api_inf_rts_inf                        2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-function_web_core_auth_atn_tnt_inf_aukc_inf                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-function_web_core_auth_atn_tnt_inf_aukc_uts_inf              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-function_web_core_auth_atn_tnt_inf_aupc_inf                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-function_web_core_auth_atn_tnt_inf_aupc_uts_inf              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-function_web_core_auth_atn_tnt_inf_idp_inf                   2025-09-09T16:59:44Z AH <xxx@gmail.com> # SAML2 IDP information
-function_web_core_auth_atn_tnt_inf_occ_inf                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-function_web_core_auth_atn_tnt_inf_occ_uts_inf               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-function_web_core_auth_atn_tnt_inf_ocp_inf                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-function_web_core_auth_atn_tnt_inf_pah_inf                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-function_web_core_auth_atn_tnt_inf_pkg_inf                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-function_web_core_auth_atn_tnt_inf_prh_inf                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-function_web_core_auth_atn_tnt_inf_ref_inf                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-function_web_core_auth_atn_tnt_inf_s2c_inf                   2025-09-09T16:58:20Z AH <xxx@gmail.com> # Retrieve SAML2 information
+function_web_core_auth_aukc_tnt_inf_aukc_inf                 2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+function_web_core_auth_aukc_tnt_inf_aukc_uts_inf             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+function_web_core_auth_aupc_tnt_inf_aupc_inf                 2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+function_web_core_auth_aupc_tnt_inf_aupc_uts_inf             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+function_web_core_auth_aupc_tnt_inf_pah_inf                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+function_web_core_auth_aupc_tnt_inf_pkg_inf                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+function_web_core_auth_aupc_tnt_inf_prh_inf                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+function_web_core_auth_aupc_tnt_inf_ref_inf                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_auth_aur_grp_tnt_inf_aur_inf               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_auth_aur_grp_tnt_inf_grp_inf               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_auth_aur_tnt_inf_aur_inf                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -269,11 +276,15 @@ function_web_core_auth_log_ep_tnt_inf_ref_inf                2025-09-02T13:21:42
 function_web_core_auth_log_ep_tnt_mod_row_log_inf            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_auth_log_ep_tnt_mod_row_log_mod            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_auth_log_ep_tnt_mod_row_ref_inf            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+function_web_core_auth_occ_tnt_inf_occ_inf                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+function_web_core_auth_occ_tnt_inf_occ_uts_inf               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+function_web_core_auth_occ_tnt_inf_ocp_inf                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_auth_pwd_aur_tnt_mod_pwd_aur_inf           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_auth_pwd_aur_tnt_mod_pwd_inf               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_auth_rol_aur_tnt_mod_rol_inf               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_auth_rol_grp_tnt_inf_grp_inf               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_auth_rol_grp_tnt_inf_rol_inf               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+function_web_core_auth_s2c_tnt_inf_s2c_inf                   2025-09-09T16:58:20Z AH <xxx@gmail.com> # Retrieve SAML2 information
 function_web_core_auth_ssn_aur_inf_aur_inf                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_auth_ssn_tnt_inf_ssn_inf                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_unauth_oidc_call_inf_call_inf              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -306,13 +317,8 @@ function_web_core_unauth_ssn_ep_inf_ep_inf                   2025-09-02T13:21:42
 procedure_all_core_unauth_ep_all_reg_reg_ep                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_all_core_unauth_spc_all_reg_reg_spc                2025-09-11T10:20:49Z AH <xxx@gmail.com> # Gen key pairs at startup
 procedure_api_core_auth_tnt_all_reg_reg_tnt                  2025-09-10T19:31:57Z AH <xxx@gmail.com> # Register tenant
-procedure_web_core_auth_atn_tnt_mod_del_idp                  2025-09-09T17:01:28Z AH <xxx@gmail.com> # Modify IDPs config
-procedure_web_core_auth_atn_tnt_mod_mod_aukc                 2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-procedure_web_core_auth_atn_tnt_mod_mod_aupc                 2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-procedure_web_core_auth_atn_tnt_mod_mod_idp                  2025-09-09T17:00:27Z AH <xxx@gmail.com> # Modify IDPs config
-procedure_web_core_auth_atn_tnt_mod_mod_occ                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-procedure_web_core_auth_atn_tnt_mod_mod_s2c                  2025-09-09T16:57:34Z AH <xxx@gmail.com> # Create SAML2 config
-procedure_web_core_auth_atn_tnt_mod_reg_idp                  2025-09-09T17:01:56Z AH <xxx@gmail.com> # Register new IDP
+procedure_web_core_auth_aukc_tnt_mod_mod_aukc                2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+procedure_web_core_auth_aupc_tnt_mod_mod_aupc                2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_web_core_auth_aur_grp_tnt_mod_mod_aur              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_web_core_auth_aur_tnt_del_del_aur                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_web_core_auth_aur_tnt_mod_row_mod_aur              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -329,9 +335,14 @@ procedure_web_core_auth_log_aur_tnt_mod_mod_log              2025-09-02T13:21:42
 procedure_web_core_auth_log_aur_tnt_mod_row_mod_log          2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_web_core_auth_log_ep_tnt_mod_mod_log               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_web_core_auth_log_ep_tnt_mod_row_mod_log           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+procedure_web_core_auth_occ_tnt_mod_mod_occ                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_web_core_auth_pwd_aur_tnt_mod_mod_pwd              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_web_core_auth_rol_aur_tnt_mod_mod_rol              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_web_core_auth_rol_grp_tnt_mod_mod_rol              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+procedure_web_core_auth_s2c_tnt_mod_del_idp                  2025-09-09T17:01:28Z AH <xxx@gmail.com> # Modify IDPs config
+procedure_web_core_auth_s2c_tnt_mod_mod_idp                  2025-09-09T17:00:27Z AH <xxx@gmail.com> # Modify IDPs config
+procedure_web_core_auth_s2c_tnt_mod_mod_s2c                  2025-09-09T16:57:34Z AH <xxx@gmail.com> # Create SAML2 config
+procedure_web_core_auth_s2c_tnt_mod_reg_idp                  2025-09-09T17:01:56Z AH <xxx@gmail.com> # Register new IDP
 procedure_web_core_auth_ssn_aur_end_end_ssn                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_web_core_auth_ssn_tnt_del_del_ssn                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_web_core_unauth_oidc_callback_mod_reg_aur          2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
