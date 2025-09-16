@@ -70,7 +70,7 @@ begin
         ,       p_dbrl_md   => false
         ,       p_dbrl_type => 'web'
         ,       p_hdlr_nm   => 'web.core.unauth.spc.tnt.Get'
-        ,       p_epp_pt    => '/web/core/unauth/saml2/metadata'
+        ,       p_epp_pt    => '/web/core/unauth/saml2/metadata.xml'
         ,       p_ep_ds     => 'Screen: SAML2 metadata'
         ,       p_mwc_nm    => 'web/unauth'
         ,       p_hrm_nm    => 'GET'
