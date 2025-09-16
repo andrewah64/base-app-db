@@ -1,4 +1,4 @@
-create or replace function web_core_auth_aupc_tnt_inf.prh_inf
+create or replace function web_core_auth_aukc_tnt_inf.prh_inf
 (
         refcursor
 ,       p_tnt_id  app_data.app_user.tnt_id%type

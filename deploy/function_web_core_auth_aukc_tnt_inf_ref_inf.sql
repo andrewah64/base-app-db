@@ -1,4 +1,4 @@
-create or replace function web_core_auth_aupc_tnt_inf.ref_inf
+create or replace function web_core_auth_aukc_tnt_inf.ref_inf
 (
         refcursor
 ,       p_tnt_id app_data.tenant.tnt_id%type
