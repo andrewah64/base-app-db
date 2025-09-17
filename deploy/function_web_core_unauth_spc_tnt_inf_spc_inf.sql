@@ -22,10 +22,10 @@ begin
                   , spc.spc_sgn_crt
                from
                          app_data.tenant                                  tnt
-                    join app_data.web_app_user_saml2_config               s2c on tnt.tnt_id = s2c.tnt_id
-                    join app_data.endpoint                                ep  on s2c.ep_id  = ep.ep_id
-                    join app_data.endpoint_path                           epp on ep.epp_id  = epp.epp_id
-                    join app_data.saml2_service_provider_certificate_pair spc on s2c.tnt_id = spc.tnt_id
+                    join app_data.web_app_user_saml2_config               s2c on tnt.tnt_id    = s2c.tnt_id
+                    join app_data.endpoint                                ep  on s2c.ep_acs_id = ep.ep_id
+                    join app_data.endpoint_path                           epp on ep.epp_id     = epp.epp_id
+                    join app_data.saml2_service_provider_certificate_pair spc on s2c.tnt_id    = spc.tnt_id
               where
                     tnt.tnt_id      = p_tnt_id
                 and spc.spc_enabled = true
