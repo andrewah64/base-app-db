@@ -22,6 +22,7 @@ begin
                                                                  when '80'  then ''
                                                                  else ':' || tnt.tnt_port::text
                                                              end || eppmtd.epp_pt               epp_mtd_pt
+                  , s2c.uts
                from
                          app_data.tenant                    tnt
                     join app_data.web_app_user_saml2_config s2c   on tnt.tnt_id    = s2c.tnt_id

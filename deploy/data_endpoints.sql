@@ -595,7 +595,7 @@ begin
         ,       p_dbrl_md   => false
         ,       p_dbrl_type => 'web'
         ,       p_hdlr_nm   => 'web.core.auth.s2c.tnt.Patch'
-        ,       p_epp_pt    => '/web/core/auth/s2c/tnt'
+        ,       p_epp_pt    => '/web/core/auth/s2c/tnt/{nm}'
         ,       p_ep_ds     => 'Screen: SAML2 configuration management'
         ,       p_mwc_nm    => 'web/auth'
         ,       p_hrm_nm    => 'PATCH'
