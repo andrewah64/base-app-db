@@ -1,9 +1,11 @@
 create or replace procedure web_core_auth_s2c_tnt_mod.mod_s2c
 (
-        p_tnt_id app_data.tenant.tnt_id%type
-,       p_aum_id app_data.web_app_user_saml2_config.aum_id%type
-,       p_by     app_data.app_user.aur_nm%type
-,       p_uts    app_data.web_app_user_saml2_config.uts%type
+        p_tnt_id        app_data.tenant.tnt_id%type
+,       p_s2c_enabled   app_data.web_app_user_saml2_config.s2c_enabled%type
+,       p_s2c_entity_id app_data.web_app_user_saml2_config.s2c_entity_id%type
+,       p_aum_id        app_data.web_app_user_saml2_config.aum_id%type
+,       p_by            app_data.app_user.aur_nm%type
+,       p_uts           app_data.web_app_user_saml2_config.uts%type
 )
 as
 $$
@@ -16,9 +18,11 @@ begin
         update
                app_data.web_app_user_saml2_config s2c
            set
-               aum_id = p_aum_id
-             , uby    = p_by
-             , uts    = now()
+               s2c_enabled   = p_s2c_enabled
+             , s2c_entity_id = p_s2c_entity_id
+             , aum_id        = p_aum_id
+             , uby           = p_by
+             , uts           = now()
          where
                s2c.tnt_id = p_tnt_id
            and s2c.uts    = p_uts

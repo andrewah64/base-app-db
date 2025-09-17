@@ -11,7 +11,9 @@ begin
              $1
          for
              select
-                    s2c.aum_id
+                    s2c.s2c_entity_id
+                  , s2c.s2c_enabled
+                  , s2c.aum_id
                   , tnt.tnt_prtc || '://' || tnt.tnt_fqdn || case tnt.tnt_port::text
                                                                  when '443' then ''
                                                                  when '80'  then ''
