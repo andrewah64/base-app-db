@@ -27,7 +27,7 @@ begin
                   , s2c.uts
                from
                          app_data.tenant                    tnt
-                    join app_data.web_app_user_saml2_config s2c   on tnt.tnt_id    = s2c.tnt_id
+                    join app_data.web_app_user_saml2_config s2c on tnt.tnt_id    = s2c.tnt_id
                     join (
                                   app_data.endpoint      epacs
                              join app_data.endpoint_path eppacs on epacs.epp_id = eppacs.epp_id
