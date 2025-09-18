@@ -1,4 +1,7 @@
 do $$
 begin
-        assert(select true from pg_tables where schemaname = 'app_data' and tablename = 'page');
+        assert(select true
+                 from pg_tables
+                where schemaname = 'app_data'
+                  and tablename  = 'page');
 end$$;

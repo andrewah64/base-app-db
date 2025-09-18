@@ -1,1 +1,1 @@
-alter table if exists app_data.saml2_service_provider_certificate_pair drop constraint fk_spc_s2c;
+alter table if exists app_data.saml2_service_provider_certificate_pair drop constraint fk_spc_tnt;

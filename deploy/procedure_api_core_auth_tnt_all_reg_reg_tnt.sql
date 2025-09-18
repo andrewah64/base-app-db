@@ -44,9 +44,6 @@ begin
                    tnt_id
                ,   aum_id
                ,   s2c_entity_id
-               ,   s2c_crt_dn
-               ,   s2c_crt_cn
-               ,   s2c_crt_org
                ,   ep_acs_id
                ,   ep_mtd_id
                )
@@ -58,9 +55,6 @@ begin
                                                             when '80'  then ''
                                                             else ':' || tnt.tnt_port::text
                                                         end                                s2c_entity_id
-             , interval '1 year'                                                           s2c_crt_dn
-             , tnt.tnt_fqdn                                                                s2c_crt_cn
-             , tnt.tnt_nm                                                                  s2c_crt_org
              , epacs.ep_id                                                                 ep_acs_id
              , epmtd.ep_id                                                                 ep_mtd_id
           from
@@ -83,6 +77,26 @@ begin
            and hrmacs.hrm_nm    = 'POST'
            and eppmtd.epp_pt    = '/web/core/unauth/saml2/metadata.xml'
            and hrmmtd.hrm_nm    = 'GET'
+             ;
+
+        insert
+          into
+               app_data.web_app_user_saml2_cert_config
+               (
+                   tnt_id
+               ,   s2g_crt_dn
+               ,   s2g_crt_cn
+               ,   s2g_crt_org
+               )
+        select
+               tnt.tnt_id        tnt_id
+             , interval '1 year' s2g_crt_dn
+             , tnt.tnt_fqdn      s2g_crt_cn
+             , tnt.tnt_nm        s2g_crt_org
+          from
+               app_data.tenant               tnt
+         where
+               tnt.tnt_id = v_tnt_id
              ;
 
         insert

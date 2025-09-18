@@ -35,6 +35,8 @@ begin
 
         delete from app_data.saml2_service_provider_certificate_pair;
 
+        delete from app_data.web_app_user_saml2_cert_config;
+
         delete from app_data.web_app_user_saml2_config;
 
         delete from app_data.tenant;
