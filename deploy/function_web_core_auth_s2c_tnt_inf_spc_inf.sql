@@ -1,4 +1,4 @@
-create or replace function web_core_auth_s2c_tnt_mod.spc_inf
+create or replace function web_core_auth_s2c_tnt_inf.spc_inf
 (
         refcursor
 ,       p_tnt_id      app_data.saml2_service_provider_certificate_pair.tnt_id%type
