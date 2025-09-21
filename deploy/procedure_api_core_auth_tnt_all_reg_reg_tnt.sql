@@ -84,17 +84,15 @@ begin
                app_data.web_app_user_saml2_cert_config
                (
                    tnt_id
-               ,   s2g_crt_dn
                ,   s2g_crt_cn
                ,   s2g_crt_org
                )
         select
-               tnt.tnt_id        tnt_id
-             , interval '1 year' s2g_crt_dn
-             , tnt.tnt_fqdn      s2g_crt_cn
-             , tnt.tnt_nm        s2g_crt_org
+               tnt.tnt_id   tnt_id
+             , tnt.tnt_fqdn s2g_crt_cn
+             , tnt.tnt_nm   s2g_crt_org
           from
-               app_data.tenant               tnt
+               app_data.tenant tnt
          where
                tnt.tnt_id = v_tnt_id
              ;
@@ -224,9 +222,9 @@ begin
         select
                tnt.tnt_id
              , ocp.ocp_id
-             , '<placeholder-' || ocp.ocp_nm::text || '-' || v_tnt_id::text ||'>'
-             , '<placeholder-' || ocp.ocp_nm::text || '-' || v_tnt_id::text ||'>'
-             , '<placeholder-' || ocp.ocp_nm::text || '-' || v_tnt_id::text ||'>'
+             , '<placeholder-url-'           || ocp.ocp_nm::text || '-' || v_tnt_id::text ||'>'
+             , '<placeholder-client-id-'     || ocp.ocp_nm::text || '-' || v_tnt_id::text ||'>'
+             , '<placeholder-client-secret-' || ocp.ocp_nm::text || '-' || v_tnt_id::text ||'>'
              , ep.ep_id
           from
                           app_data.tenant        tnt

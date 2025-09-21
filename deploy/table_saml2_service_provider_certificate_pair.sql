@@ -18,8 +18,8 @@ create table if not exists app_data.saml2_service_provider_certificate_pair
 ,       uts         timestamp with time zone default now()                not null
 ,       constraint pk_spc            primary key (spc_id)
 ,       constraint uk_spc            unique      (tnt_id, spc_nm)
-,       constraint ck_spc_nm         check       (spc_nm = lower(spc_nm) and length(trim(spc_nm))  > 0)
+,       constraint ck_spc_nm         check       (length(trim(spc_nm))     > 0)
 ,       constraint ck_spc_cn_nm      check       (length(trim(spc_cn_nm))  > 0)
 ,       constraint ck_spc_org_nm     check       (length(trim(spc_org_nm)) > 0)
-,       constraint ck_spc_inc_exp_ts check       (spc_inc_ts < spc_exp_ts)
+,       constraint ck_spc_inc_exp_ts check       (spc_inc_ts <= spc_exp_ts)
 );

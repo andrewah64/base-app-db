@@ -1,6 +1,7 @@
 create or replace procedure web_core_auth_s2c_tnt_mod.reg_spc
 (
         p_tnt_id      app_data.saml2_service_provider_certificate_pair.tnt_id%type
+,       p_spc_nm      app_data.saml2_service_provider_certificate_pair.spc_nm%type
 ,       p_spc_cn_nm   app_data.saml2_service_provider_certificate_pair.spc_cn_nm%type
 ,       p_spc_org_nm  app_data.saml2_service_provider_certificate_pair.spc_org_nm%type
 ,       p_spc_enc_crt app_data.saml2_service_provider_certificate_pair.spc_enc_crt%type
@@ -20,6 +21,7 @@ begin
                app_data.saml2_service_provider_certificate_pair
              (
                  tnt_id
+             ,   spc_nm
              ,   spc_cn_nm
              ,   spc_org_nm
              ,   spc_enc_crt
@@ -35,6 +37,7 @@ begin
         values
              (
                  p_tnt_id
+             ,   p_spc_nm
              ,   p_spc_cn_nm
              ,   p_spc_org_nm
              ,   p_spc_enc_crt

@@ -1,3 +1,0 @@
-create role role_all_core_unauth_spc_all_reg nologin;
-
-grant usage on schema all_core_unauth_spc_all_reg to role_all_core_unauth_spc_all_reg;
