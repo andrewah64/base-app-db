@@ -594,6 +594,21 @@ begin
         ,       p_dbrl_ds   => 'Manage SAML2 configuration'
         ,       p_dbrl_md   => false
         ,       p_dbrl_type => 'web'
+        ,       p_hdlr_nm   => 'web.core.auth.s2c.tnt.Delete'
+        ,       p_epp_pt    => '/web/core/auth/s2c/tnt/{nm}'
+        ,       p_ep_ds     => 'Screen: SAML2 configuration management'
+        ,       p_mwc_nm    => 'web/auth'
+        ,       p_hrm_nm    => 'DELETE'
+        ,       p_pg_nm     => 'Manage SAML2 configuration'
+        ,       pe_is_entry => false
+        );
+
+        call all_core_unauth_ep_all_reg.reg_ep
+        (
+                p_dbrl_nm   => 'role_web_core_auth_s2c_tnt_mod'
+        ,       p_dbrl_ds   => 'Manage SAML2 configuration'
+        ,       p_dbrl_md   => false
+        ,       p_dbrl_type => 'web'
         ,       p_hdlr_nm   => 'web.core.auth.s2c.tnt.Patch'
         ,       p_epp_pt    => '/web/core/auth/s2c/tnt/{nm}'
         ,       p_ep_ds     => 'Screen: SAML2 configuration management'

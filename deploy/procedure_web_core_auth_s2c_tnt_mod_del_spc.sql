@@ -9,7 +9,7 @@ begin
 
         delete
           from
-               app_data.app_data.saml2_service_provider_certificate_pair spc
+               app_data.saml2_service_provider_certificate_pair spc
          where
                spc.tnt_id = p_tnt_id
            and spc.spc_id = any(p_spc_id)
