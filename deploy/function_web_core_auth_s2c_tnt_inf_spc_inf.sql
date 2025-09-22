@@ -36,17 +36,17 @@ begin
         end if;
 
         if p_spc_inc_ts is     null and p_spc_exp_ts is     null then
-                v_sql := v_sql || ' and ( 1 = 1 or $3 is null or $3 = '''' ) ';
-                v_sql := v_sql || ' and ( 1 = 1 or $4 is null or $4 = '''' ) ';
+                v_sql := v_sql || ' and ( 1 = 1 or $3 is null ) ';
+                v_sql := v_sql || ' and ( 1 = 1 or $4 is null ) ';
         end if;
 
         if p_spc_inc_ts is not null and p_spc_exp_ts is     null then
                 v_sql := v_sql || ' and spc.spc_inc_ts >= $3 ';
-                v_sql := v_sql || ' and ( 1 = 1 or $4 is null or $4 = '''' ) ';
+                v_sql := v_sql || ' and ( 1 = 1 or $4 is null ) ';
         end if;
 
         if p_spc_inc_ts is     null and p_spc_exp_ts is not null then
-                v_sql := v_sql || ' and ( 1 = 1 or $3 is null or $3 = '''' ) ';
+                v_sql := v_sql || ' and ( 1 = 1 or $3 is null ) ';
                 v_sql := v_sql || ' and spc.spc_exp_ts <= $4 ';
         end if;
 
