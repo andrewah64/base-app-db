@@ -650,6 +650,36 @@ begin
 
         call all_core_unauth_ep_all_reg.reg_ep
         (
+                p_dbrl_nm   => 'role_web_core_auth_s2c_tnt_mod'
+        ,       p_dbrl_ds   => 'Manage SAML2 configuration'
+        ,       p_dbrl_md   => false
+        ,       p_dbrl_type => 'web'
+        ,       p_hdlr_nm   => 'web.core.auth.s2c.tnt.id.Get'
+        ,       p_epp_pt    => '/web/core/auth/s2c/tnt/id/{nm}/{id}'
+        ,       p_ep_ds     => 'Action: refresh SAML2-related record'
+        ,       p_mwc_nm    => 'web/auth'
+        ,       p_hrm_nm    => 'GET'
+        ,       p_pg_nm     => 'Manage SAML2 configuration'
+        ,       pe_is_entry => false
+        );
+
+        call all_core_unauth_ep_all_reg.reg_ep
+        (
+                p_dbrl_nm   => 'role_web_core_auth_s2c_tnt_mod'
+        ,       p_dbrl_ds   => 'Manage SAML2 configuration'
+        ,       p_dbrl_md   => false
+        ,       p_dbrl_type => 'web'
+        ,       p_hdlr_nm   => 'web.core.auth.s2c.tnt.id.Patch'
+        ,       p_epp_pt    => '/web/core/auth/s2c/tnt/id/{nm}/{id}'
+        ,       p_ep_ds     => 'Action: modify SAML2-related record'
+        ,       p_mwc_nm    => 'web/auth'
+        ,       p_hrm_nm    => 'PATCH'
+        ,       p_pg_nm     => 'Manage SAML2 configuration'
+        ,       pe_is_entry => false
+        );
+
+        call all_core_unauth_ep_all_reg.reg_ep
+        (
                 p_dbrl_nm   => 'role_web_core_auth_aur_grp_tnt_inf'
         ,       p_dbrl_ds   => 'View a group''s users'
         ,       p_dbrl_md   => false
