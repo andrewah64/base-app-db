@@ -15,7 +15,7 @@ create table if not exists app_data.oidc_client
 ,       constraint pk_occ               primary key (occ_id)
 ,       constraint uk_occ               unique      (tnt_id, ocp_id)
 ,       constraint uk_occ_url           unique      (tnt_id, occ_url)
-,       constraint ck_occ_url           check       (length(trim(occ_url))           > 0)
-,       constraint ck_occ_client_id     check       (length(trim(occ_client_id))     > 0)
-,       constraint ck_occ_client_secret check       (length(trim(occ_client_secret)) > 0)
+,       constraint ck_occ_url           check       (length(trim(occ_url))           > 0 and occ_url           = trim(occ_url))
+,       constraint ck_occ_client_id     check       (length(trim(occ_client_id))     > 0 and occ_client_id     = trim(occ_client_id))
+,       constraint ck_occ_client_secret check       (length(trim(occ_client_secret)) > 0 and occ_client_secret = trim(occ_client_secret))
 );

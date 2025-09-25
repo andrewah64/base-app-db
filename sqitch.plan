@@ -292,6 +292,7 @@ function_web_core_auth_s2c_tnt_inf_s2g_uts_inf               2025-09-18T14:34:14
 function_web_core_auth_s2c_tnt_inf_spc_inf                   2025-09-20T17:16:40Z AH <xxx@gmail.com> # Register new cert pairs
 function_web_core_auth_s2c_tnt_mod_row_spc_inf               2025-09-24T12:37:32Z AH <xxx@gmail.com> # Modify individual cert
 function_web_core_auth_s2c_tnt_mod_row_spc_mod               2025-09-24T12:37:37Z AH <xxx@gmail.com> # Modify individual cert
+function_web_core_auth_s2c_tnt_mod_row_spc_val               2025-09-25T12:43:27Z AH <xxx@gmail.com> # Validate SPC records
 function_web_core_auth_s2c_tnt_mod_spc_val                   2025-09-20T17:16:21Z AH <xxx@gmail.com> # Register new cert pairs
 function_web_core_auth_ssn_aur_inf_aur_inf                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_auth_ssn_tnt_inf_ssn_inf                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit

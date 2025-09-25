@@ -12,5 +12,5 @@ create table if not exists app_data.app_group
 ,       uts          timestamp with time zone default now()                not null
 ,       constraint pk_grp      primary key (grp_id)
 ,       constraint uk_grp_nm   unique      (tnt_id, grp_nm)
-,       constraint ck_grp_nm   check       (length(trim(grp_nm)) > 0)
+,       constraint ck_grp_nm   check       (length(trim(grp_nm)) > 0 and grp_nm = trim(grp_nm))
 );

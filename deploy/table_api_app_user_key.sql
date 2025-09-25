@@ -12,5 +12,5 @@ create table app_data.api_app_user_key
 ,       constraint pk_aauk     primary key (aauk_id)
 ,       constraint uk_aauk_key unique      (aauk_key)
 ,       constraint uk_aauk_nm  unique      (aur_id, aauk_nm)
-,       constraint ck_aauk_nm  check       (length(trim(aauk_nm)) > 0)
+,       constraint ck_aauk_nm  check       (length(trim(aauk_nm)) > 0 and aauk_nm = trim(aauk_nm))
 );
