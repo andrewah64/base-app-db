@@ -68,7 +68,7 @@ begin
         end if;
 
         if p_offset is not null and p_limit is not null then
-                v_sql := v_sql || ' order by spc_nm asc ';
+                v_sql := v_sql || ' order by spc_enabled desc, spc_nm asc ';
                 v_sql := v_sql || ' limit $6 offset $7 ';
         end if;
 
