@@ -39,6 +39,16 @@ begin
 
         delete from app_data.web_app_user_saml2_config;
 
+        delete from app_data.saml2_identity_provider_metadata_endpoint;
+
+        delete from app_data.saml2_identity_provider_slo_endpoint;
+
+        delete from app_data.saml2_identity_provider_sso_endpoint;
+
+        delete from app_data.saml2_identity_provider_certificate;
+
+        delete from app_data.saml2_identity_provider;
+
         delete from app_data.tenant;
 
         commit;
