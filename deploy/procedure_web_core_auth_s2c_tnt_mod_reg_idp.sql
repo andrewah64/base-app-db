@@ -1,6 +1,7 @@
 create or replace procedure web_core_auth_s2c_tnt_mod.reg_idp
 (
         p_tnt_id        app_data.saml2_identity_provider.tnt_id%type
+,       p_idp_nm        app_data.saml2_identity_provider.idp_nm%type
 ,       p_idp_entity_id app_data.saml2_identity_provider.idp_entity_id%type
 ,       p_ipc_crt       bytea[]
 ,       p_cru_nm        text[]
@@ -27,6 +28,7 @@ begin
                   app_data.saml2_identity_provider
                   (
                       tnt_id
+                  ,   idp_nm
                   ,   idp_entity_id
                   ,   cby
                   ,   cts
@@ -35,6 +37,7 @@ begin
                   )
            select
                   p_tnt_id        tnt_id
+                , p_idp_nm        idp_nm
                 , p_idp_entity_id idp_entity_id
                 , p_by            cby
                 , v_now           cts
@@ -67,6 +70,14 @@ begin
              where
                    idp.tnt_id        = p_tnt_id
                and idp.idp_entity_id = p_idp_entity_id
+                 ;
+
+            update
+                   app_data.saml2_identity_provider idp
+               set
+                   idp_nm = p_idp_nm
+             where
+                   idp.idp_id = v_idp_id
                  ;
 
             delete
