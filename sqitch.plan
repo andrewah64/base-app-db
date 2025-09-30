@@ -143,8 +143,10 @@ table_passkey_discoverable_credential                        2025-09-02T13:21:42
 table_passkey_hint                                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_passkey_public_key_algorithm                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_passkey_user_verification                              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
+table_saml2_endpoint_binding                                 2025-09-30T21:00:58Z AH <xxx@gmail.com> # EP bind
 table_saml2_identity_provider                                2025-09-03T20:46:11Z AH <xxx@gmail.com> # SAML2 IDP info
 table_saml2_identity_provider_certificate                    2025-09-28T21:07:24Z AH <xxx@gmail.com> # Persist IDP certs
+table_saml2_identity_provider_certificate_use                2025-09-30T20:19:21Z AH <xxx@gmail.com> # Purpose of certs
 table_saml2_identity_provider_metadata_endpoint              2025-09-08T12:40:15Z AH <xxx@gmail.com> # IDP Metadata endpoints
 table_saml2_identity_provider_slo_endpoint                   2025-09-07T20:27:20Z AH <xxx@gmail.com> # IDP SLO endpoint
 table_saml2_identity_provider_sso_endpoint                   2025-09-07T20:27:16Z AH <xxx@gmail.com> # IDP SSO endpoint

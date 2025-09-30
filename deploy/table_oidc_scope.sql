@@ -8,4 +8,5 @@ create table app_data.oidc_scope
 ,       uts    timestamp with time zone  default now()                not null
 ,       constraint pk_ocs    primary key (ocs_id)
 ,       constraint uk_ocs_nm unique      (ocs_nm)
+,       constraint ck_occ_nm check       (length(trim(ocs_nm)) > 0 and ocs_nm = trim(ocs_nm))
 );
