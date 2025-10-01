@@ -207,26 +207,28 @@ begin
                join app_data.saml2_identity_provider_certificate_use cru       on trim(lower(use.cru_nm)) = trim(lower(cru.cru_nm))
              ;
 
-        insert
-          into
-               app_data.saml2_identity_provider_metadata_endpoint
-             (
-                 idp_id
-             ,   mde_url
-             ,   cby
-             ,   cts
-             ,   uby
-             ,   uts
-             )
-        values
-             (
-               v_idp_id
-             , p_mde_url
-             , p_by
-             , v_now
-             , p_by
-             , v_now
-             );
+        if p_mde_url is not null then
+                insert
+                  into
+                       app_data.saml2_identity_provider_metadata_endpoint
+                     (
+                         idp_id
+                     ,   mde_url
+                     ,   cby
+                     ,   cts
+                     ,   uby
+                     ,   uts
+                     )
+                values
+                     (
+                       v_idp_id
+                     , p_mde_url
+                     , p_by
+                     , v_now
+                     , p_by
+                     , v_now
+                     );
+        end if;
 
         insert
           into
