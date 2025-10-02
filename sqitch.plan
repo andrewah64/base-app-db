@@ -363,6 +363,7 @@ procedure_web_core_auth_s2c_tnt_mod_mod_s2c                  2025-09-09T16:57:34
 procedure_web_core_auth_s2c_tnt_mod_mod_s2g                  2025-09-18T14:34:34Z AH <xxx@gmail.com> # Cert defaults
 procedure_web_core_auth_s2c_tnt_mod_reg_idp                  2025-09-09T17:01:56Z AH <xxx@gmail.com> # Register new IDP
 procedure_web_core_auth_s2c_tnt_mod_reg_spc                  2025-09-20T17:13:50Z AH <xxx@gmail.com> # Register new cert pairs
+procedure_web_core_auth_s2c_tnt_mod_row_mod_idp              2025-10-02T12:37:47Z AH <xxx@gmail.com> # mod IDP
 procedure_web_core_auth_s2c_tnt_mod_row_mod_spc              2025-09-24T12:51:59Z AH <xxx@gmail.com> # Modify one saml2 cert pair
 procedure_web_core_auth_ssn_aur_end_end_ssn                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_web_core_auth_ssn_tnt_del_del_ssn                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
