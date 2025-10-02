@@ -74,7 +74,7 @@ begin
         if p_idp_entity_id is null or p_idp_entity_id = '' then
                 v_sql := v_sql || ' and ( 1 = 1 or $3 is null or $3 = '''' ) ';
         else
-                v_sql := v_sql || ' and idp.idp_identity_id like ''%%'' || $3 || ''%%'' ';
+                v_sql := v_sql || ' and idp.idp_entity_id like ''%%'' || $3 || ''%%'' ';
         end if;
 
         if p_idp_enabled is null then
