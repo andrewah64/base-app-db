@@ -24,14 +24,14 @@ begin
                               app_data.saml2_identity_provider idp
                     left join (
                                     select
-                                           mde.mde_id
+                                           mde.idp_id
                                          , count(*)   num_mde
                                       from
                                            app_data.saml2_identity_provider_metadata_endpoint mde
                                      where
                                            mde.idp_id = p_idp_id
                                   group by
-                                           mde.mde_id
+                                           mde.idp_id
                               ) mde
                            on (
                                   idp.idp_id = mde.idp_id
@@ -60,7 +60,7 @@ begin
                                            slo.idp_id = p_idp_id
                                   group by
                                            slo.idp_id
-                              ) sso
+                              ) slo
                            on (
                                   idp.idp_id = slo.idp_id
                               )
