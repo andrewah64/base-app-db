@@ -100,7 +100,7 @@ begin
         ,       p_dbrl_md   => false
         ,       p_dbrl_type => 'web'
         ,       p_hdlr_nm   => 'web.core.oidc.Call'
-        ,       p_epp_pt    => '/web/core/oidc/{nm}'
+        ,       p_epp_pt    => '/web/core/unauth/oidc/{nm}'
         ,       p_ep_ds     => 'Action: initiate OIDC flow'
         ,       p_mwc_nm    => 'web/unauth'
         ,       p_hrm_nm    => 'GET'
@@ -115,7 +115,7 @@ begin
         ,       p_dbrl_md   => false
         ,       p_dbrl_type => 'web'
         ,       p_hdlr_nm   => 'web.core.oidc.Callback'
-        ,       p_epp_pt    => '/web/core/oidc/callback/{nm}'
+        ,       p_epp_pt    => '/web/core/unauth/oidc/callback/{nm}'
         ,       p_ep_ds     => 'Action: handle OIDC callback'
         ,       p_mwc_nm    => 'web/unauth'
         ,       p_hrm_nm    => 'GET'

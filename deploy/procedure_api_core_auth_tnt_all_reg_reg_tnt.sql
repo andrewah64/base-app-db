@@ -235,7 +235,7 @@ begin
                           )
          where
                tnt.tnt_id = v_tnt_id
-           and epp.epp_pt = '/web/core/oidc/callback/{nm}'
+           and epp.epp_pt = '/web/core/unauth/oidc/callback/{nm}'
              ;
 
         insert
