@@ -69,7 +69,7 @@ begin
         ,       p_dbrl_ds   => 'View SAML2 metadata'
         ,       p_dbrl_md   => false
         ,       p_dbrl_type => 'web'
-        ,       p_hdlr_nm   => 'web.core.unauth.spc.tnt.Get'
+        ,       p_hdlr_nm   => 'web.core.unauth.saml2.Metadata'
         ,       p_epp_pt    => '/web/core/unauth/saml2/metadata.xml'
         ,       p_ep_ds     => 'Screen: SAML2 metadata'
         ,       p_mwc_nm    => 'web/unauth'
@@ -84,7 +84,7 @@ begin
         ,       p_dbrl_ds   => 'SAML2 ACS'
         ,       p_dbrl_md   => false
         ,       p_dbrl_type => 'web'
-        ,       p_hdlr_nm   => '???'
+        ,       p_hdlr_nm   => 'web.core.unauth.saml2.Acs'
         ,       p_epp_pt    => '/web/core/unauth/saml2/acs'
         ,       p_ep_ds     => 'Action: manage IDP requests'
         ,       p_mwc_nm    => 'web/unauth'
