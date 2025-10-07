@@ -10,6 +10,6 @@ create table if not exists app_data.saml2_identity_provider_slo_endpoint
 ,       uby           text                     default current_user         not null
 ,       uts           timestamp with time zone default now()                not null
 ,       constraint pk_slo     primary key (slo_id)
-,       constraint uk_slo     unique      (idp_id, slo_url)
+,       constraint uk_slo     unique      (idp_id, slo_url, bnd_id)
 ,       constraint ck_slo_url check       (length(trim(slo_url)) > 0)
 );
