@@ -4,7 +4,7 @@ create table if not exists app_data.saml2_identity_provider
 ,       tnt_id        bigint                                                not null
 ,       idp_nm        text                                                  not null
 ,       idp_entity_id text                                                  not null
-,       idp_enabled   boolean                  default true                 not null
+,       idp_enabled   boolean                  default false                not null
 ,       cby           text                     default current_user         not null
 ,       cts           timestamp with time zone default now()                not null
 ,       uby           text                     default current_user         not null

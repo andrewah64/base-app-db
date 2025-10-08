@@ -1,9 +1,10 @@
 create or replace function web_core_auth_s2c_tnt_mod.row_idp_val
 (
         refcursor
-,       p_tnt_id  app_data.tenant.tnt_id%type
-,       p_idp_id  app_data.saml2_identity_provider.idp_id%type
-,       p_idp_nm  app_data.saml2_identity_provider.idp_nm%type
+,       p_tnt_id      app_data.tenant.tnt_id%type
+,       p_idp_id      app_data.saml2_identity_provider.idp_id%type
+,       p_idp_enabled app_data.saml2_identity_provider.idp_enabled%type
+,       p_idp_nm      app_data.saml2_identity_provider.idp_nm%type
 )
 returns refcursor
 as
@@ -13,7 +14,25 @@ begin
              $1
          for
              select
-                    coalesce
+                    case
+                        when p_idp_enabled
+                        then coalesce
+                             (
+                                 (
+                                     select
+                                            false
+                                       from
+                                            app_data.saml2_identity_provider idp
+                                      where
+                                            idp.tnt_id       = p_tnt_id
+                                        and idp.idp_id      != p_idp_id
+                                        and idp.idp_enabled  = true
+                                 )
+                             ,   true
+                             )
+                        else true
+                    end spc_enabled_ok
+                  , coalesce
                     (
                         (
                             select

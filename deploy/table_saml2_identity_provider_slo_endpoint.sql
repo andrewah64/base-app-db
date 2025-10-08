@@ -4,7 +4,7 @@ create table if not exists app_data.saml2_identity_provider_slo_endpoint
 ,       idp_id        bigint                                                not null
 ,       slo_url       text                                                  not null
 ,       bnd_id        bigint                                                not null
-,       slo_enabled   boolean                  default true                 not null
+,       slo_enabled   boolean                  default false                not null
 ,       cby           text                     default current_user         not null
 ,       cts           timestamp with time zone default now()                not null
 ,       uby           text                     default current_user         not null
