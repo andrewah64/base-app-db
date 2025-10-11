@@ -25,6 +25,7 @@ begin
                                                                  else ':' || tnt.tnt_port::text
                                                              end || eppmtd.epp_pt               epp_mtd_pt
                   , spc.spc_ok
+                  , idp.idp_ok
                   , s2c.uts
                from
                                app_data.tenant                    tnt
@@ -59,6 +60,52 @@ begin
                                           ,   false
                                           ) spc_ok
                                ) spc
+                    cross join (
+                                   select
+                                          coalesce
+                                          (
+                                              (
+                                                  select
+                                                         true
+                                                    from
+                                                         app_data.saml2_identity_provider idp
+                                                   where
+                                                         idp.tnt_id      = p_tnt_id
+                                                     and idp.idp_enabled = true
+                                                     and     exists (
+                                                                        select
+                                                                               null
+                                                                          from
+                                                                               app_data.saml2_identity_provider_sso_endpoint sso
+                                                                         where
+                                                                               sso.idp_id      = idp.idp_id
+                                                                           and sso.sso_enabled = true
+                                                                    )
+                                                     and not exists (
+                                                                        select
+                                                                               null
+                                                                          from
+                                                                               app_data.saml2_identity_provider_certificate_use cru
+                                                                         where
+                                                                               not exists (
+                                                                                              select
+                                                                                                     null
+                                                                                                from
+                                                                                                     app_data.saml2_identity_provider_certificate ipc
+                                                                                               where
+                                                                                                     ipc.cru_id = cru.cru_id
+                                                                                                 and ipc.idp_id = idp.idp_id
+                                                                                                 and now()
+                                                                                                           between
+                                                                                                                   ipc.ipc_inc_ts
+                                                                                                               and
+                                                                                                                   ipc.ipc_exp_ts
+                                                                                          )
+                                                                    )
+                                              )
+                                          ,   false
+                                          ) idp_ok
+                               ) idp
               where
                     s2c.tnt_id = p_tnt_id
                   ;
