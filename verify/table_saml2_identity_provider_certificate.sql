@@ -1,7 +1,7 @@
--- Verify base-app-db:table_saml2_identity_provider_certificate on pg
-
-BEGIN;
-
--- XXX Add verifications here.
-
-ROLLBACK;
+do $$
+begin
+        assert(select true
+                 from pg_tables
+                where schemaname = 'app_data'
+                  and tablename  = 'saml2_identity_provider_certificate');
+end$$;

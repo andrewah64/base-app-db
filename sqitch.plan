@@ -51,7 +51,8 @@ schema_web_core_unauth_aur_tnt_reg                           2025-09-02T13:21:42
 schema_web_core_unauth_otp_aur_inf                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_unauth_otp_aur_mod                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_unauth_otp_ssn_aur_mod                       2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-schema_web_core_unauth_spc_tnt_inf                           2025-09-11T15:27:38Z AH <xxx@gmail.com> # SAML2 metadata
+schema_web_core_unauth_saml2_acs_inf                         2025-10-12T19:54:32Z AH <xxx@gmail.com> # SAML2 ACS endpoint
+schema_web_core_unauth_saml2_mde_inf                         2025-09-11T15:27:38Z AH <xxx@gmail.com> # SAML2 metadata
 schema_web_core_unauth_ssn_ep_inf                            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_all_core_unauth_tnt_all_inf                             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_api_core_auth_tnt_all_reg                               2025-09-10T19:30:37Z AH <xxx@gmail.com> # Add tenants
@@ -98,7 +99,8 @@ role_web_core_unauth_otp_ssn_aur_mod                         2025-09-02T13:21:42
 role_web_core_unauth_rts_web_inf                             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_web_core_auth_s2c_tnt_inf                               2025-09-15T17:03:58Z AH <xxx@gmail.com> # SAML2 config
 role_web_core_auth_s2c_tnt_mod                               2025-09-15T17:04:02Z AH <xxx@gmail.com> # SAML2 config
-role_web_core_unauth_spc_tnt_inf                             2025-09-11T15:27:47Z AH <xxx@gmail.com> # SAML2 metadata
+role_web_core_unauth_saml2_acs_inf                           2025-10-12T19:54:52Z AH <xxx@gmail.com> # SAML2 ACS endpoint
+role_web_core_unauth_saml2_mde_inf                           2025-09-11T15:27:47Z AH <xxx@gmail.com> # SAML2 metadata
 role_web_core_unauth_ssn_ep_inf                              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_api                                                    2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_api_app_user                                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -325,7 +327,8 @@ function_web_core_unauth_otp_aur_inf_otp_aur_inf             2025-09-02T13:21:42
 function_web_core_unauth_otp_aur_mod_otp_inf                 2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_unauth_otp_ssn_aur_mod_aur_inf             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_unauth_otp_ssn_aur_mod_nnc_inf             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-function_web_core_unauth_spc_tnt_inf_spc_inf                 2025-09-11T15:28:46Z AH <xxx@gmail.com> # SAML2 metadata
+function_web_core_unauth_saml2_acs_inf_acs_inf               2025-10-11T19:59:05Z AH <xxx@gmail.com> # data for ACS endpoint
+function_web_core_unauth_saml2_mde_inf_mde_inf               2025-09-11T15:28:46Z AH <xxx@gmail.com> # SAML2 metadata
 function_web_core_unauth_ssn_aur_reg_aukc_atn_inf            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_unauth_ssn_aur_reg_aum_inf                 2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_unauth_ssn_aur_reg_aur_pky_inf             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -361,7 +364,6 @@ procedure_web_core_auth_rol_aur_tnt_mod_mod_rol              2025-09-02T13:21:42
 procedure_web_core_auth_rol_grp_tnt_mod_mod_rol              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_web_core_auth_s2c_tnt_mod_del_idp                  2025-09-09T17:01:28Z AH <xxx@gmail.com> # Modify IDPs config
 procedure_web_core_auth_s2c_tnt_mod_del_spc                  2025-09-20T17:16:50Z AH <xxx@gmail.com> # Register new cert pairs
-procedure_web_core_auth_s2c_tnt_mod_mod_idp                  2025-09-09T17:00:27Z AH <xxx@gmail.com> # Modify IDPs config
 procedure_web_core_auth_s2c_tnt_mod_mod_s2c                  2025-09-09T16:57:34Z AH <xxx@gmail.com> # Create SAML2 config
 procedure_web_core_auth_s2c_tnt_mod_mod_s2g                  2025-09-18T14:34:34Z AH <xxx@gmail.com> # Cert defaults
 procedure_web_core_auth_s2c_tnt_mod_reg_idp                  2025-09-09T17:01:56Z AH <xxx@gmail.com> # Register new IDP

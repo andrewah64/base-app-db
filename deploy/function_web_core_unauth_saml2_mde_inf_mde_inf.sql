@@ -1,4 +1,4 @@
-create or replace function web_core_unauth_spc_tnt_inf.spc_inf
+create or replace function web_core_unauth_saml2_mde_inf.mde_inf
 (
         refcursor
 ,       p_tnt_id app_data.tenant.tnt_id%type

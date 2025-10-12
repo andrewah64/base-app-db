@@ -65,11 +65,11 @@ begin
 
         call all_core_unauth_ep_all_reg.reg_ep
         (
-                p_dbrl_nm   => 'role_web_core_unauth_spc_tnt_inf'
+                p_dbrl_nm   => 'role_web_core_unauth_saml2_mde_inf'
         ,       p_dbrl_ds   => 'View SAML2 metadata'
         ,       p_dbrl_md   => false
         ,       p_dbrl_type => 'web'
-        ,       p_hdlr_nm   => 'web.core.unauth.saml2.Metadata'
+        ,       p_hdlr_nm   => 'web.core.unauth.saml2.mde.Get'
         ,       p_epp_pt    => '/web/core/unauth/saml2/metadata.xml'
         ,       p_ep_ds     => 'Screen: SAML2 metadata'
         ,       p_mwc_nm    => 'web/unauth'
@@ -80,11 +80,11 @@ begin
 
         call all_core_unauth_ep_all_reg.reg_ep
         (
-                p_dbrl_nm   => 'role_web_core_unauth_spc_tnt_inf'
+                p_dbrl_nm   => 'role_web_core_unauth_saml2_acs_inf'
         ,       p_dbrl_ds   => 'SAML2 ACS'
         ,       p_dbrl_md   => false
         ,       p_dbrl_type => 'web'
-        ,       p_hdlr_nm   => 'web.core.unauth.saml2.Acs'
+        ,       p_hdlr_nm   => 'web.core.unauth.saml2.acs.Post'
         ,       p_epp_pt    => '/web/core/unauth/saml2/acs'
         ,       p_ep_ds     => 'Action: manage IDP requests'
         ,       p_mwc_nm    => 'web/unauth'
