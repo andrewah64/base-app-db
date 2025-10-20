@@ -1,3 +1,0 @@
-revoke usage on schema web_core_unauth_saml2_mde_inf from role_web_core_unauth_saml2_mde_inf;
-
-drop role if exists role_web_core_unauth_saml2_mde_inf;

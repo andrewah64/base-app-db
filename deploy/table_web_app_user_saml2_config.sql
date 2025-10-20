@@ -5,7 +5,6 @@ create table if not exists app_data.web_app_user_saml2_config
 ,       s2c_enabled   boolean                  default true              not null
 ,       s2c_entity_id text                                               not null
 ,       ep_acs_id     bigint                                             not null
-,       ep_mtd_id     bigint                                             not null
 ,       cby           text                     default current_user      not null
 ,       cts           timestamp with time zone default now()             not null
 ,       uby           text                     default current_user      not null

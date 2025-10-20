@@ -15,7 +15,6 @@ begin
                   , d.aukc_enabled
                   , e.saml2_s2i
                   , e.saml2_s2s
-                  , e.saml2_s2u
                   , coalesce (a.google   , b.google   ) google_enabled
                   , coalesce (a.microsoft, b.microsoft) microsoft_enabled
                from            (
@@ -72,27 +71,12 @@ begin
                                    select
                                           coalesce(bool_and(case when wam.wam_s2i then true else false end),false) saml2_s2i
                                         , coalesce(bool_and(case when wam.wam_s2s then true else false end),false) saml2_s2s
-                                        , coalesce(bool_and(case when wam.wam_s2u then true else false end),false) saml2_s2u
                                      from
                                                app_data.web_app_user_saml2_config s2c
                                           join app_data.web_atn_method            wam on s2c.aum_id = wam.aum_id
                                     where
                                           s2c.tnt_id      = p_tnt_id
                                       and s2c.s2c_enabled = true
-                                      and exists (
-                                                     select
-                                                            null
-                                                       from
-                                                            app_data.saml2_service_provider_certificate_pair spc
-                                                      where
-                                                            spc.tnt_id      = s2c.tnt_id
-                                                        and spc.spc_enabled = true
-                                                        and now()
-                                                                  between
-                                                                          spc.spc_inc_ts
-                                                                      and
-                                                                          spc.spc_exp_ts
-                                                 )
                                       and exists (
                                                      select
                                                             null

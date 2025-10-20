@@ -16,14 +16,14 @@ begin
                   , waur.aur_ssn_dn
                   , epp.epp_pt
                from
-                         app_data.app_user                           aur
-                    join app_data.web_app_user                       waur  on aur.aur_id   = waur.aur_id
+                         app_data.app_user                aur
+                    join app_data.web_app_user            waur  on aur.aur_id   = waur.aur_id
                     join app_data.web_app_user_atn_method wauam on waur.aur_id  = wauam.aur_id
                     join app_data.web_atn_method          wam   on wauam.aum_id = wam.aum_id
-                    join app_data.web_app_user_home_page             wauhp on waur.aur_id  = wauhp.aur_id
-                    join app_data.page_endpoint                      pe    on wauhp.pg_id  = pe.pg_id
-                    join app_data.endpoint                           ep    on pe.ep_id     = ep.ep_id
-                    join app_data.endpoint_path                      epp   on ep.epp_id    = epp.epp_id
+                    join app_data.web_app_user_home_page  wauhp on waur.aur_id  = wauhp.aur_id
+                    join app_data.page_endpoint           pe    on wauhp.pg_id  = pe.pg_id
+                    join app_data.endpoint                ep    on pe.ep_id     = ep.ep_id
+                    join app_data.endpoint_path           epp   on ep.epp_id    = epp.epp_id
               where
                     aur.tnt_id     = p_tnt_id
                 and pe.pe_is_entry = true
@@ -36,8 +36,7 @@ begin
                                 where
                                       auea.aur_id = aur.aur_id
                                   and auea.aur_ea = p_aur_ea
-                           )
-                  ;
+                           );
 
         return $1;
 end;

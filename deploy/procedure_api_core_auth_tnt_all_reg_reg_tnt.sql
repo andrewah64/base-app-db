@@ -45,7 +45,6 @@ begin
                ,   aum_id
                ,   s2c_entity_id
                ,   ep_acs_id
-               ,   ep_mtd_id
                )
         select
                tnt.tnt_id                                                                  tnt_id
@@ -55,46 +54,20 @@ begin
                                                             when '80'  then ''
                                                             else ':' || tnt.tnt_port::text
                                                         end                                s2c_entity_id
-             , epacs.ep_id                                                                 ep_acs_id
-             , epmtd.ep_id                                                                 ep_mtd_id
+             , ep.ep_id                                                                    ep_acs_id
           from
                           app_data.tenant               tnt
                cross join app_data.web_atn_saml2_method asm
                cross join (
-                                   app_data.endpoint            epacs
-                              join app_data.endpoint_path       eppacs on epacs.epp_id = eppacs.epp_id
-                              join app_data.http_request_method hrmacs on epacs.hrm_id = hrmacs.hrm_id
-                          )
-               cross join (
-                                   app_data.endpoint            epmtd
-                              join app_data.endpoint_path       eppmtd on epmtd.epp_id = eppmtd.epp_id
-                              join app_data.http_request_method hrmmtd on epmtd.hrm_id = hrmmtd.hrm_id
+                                   app_data.endpoint            ep
+                              join app_data.endpoint_path       epp on ep.epp_id = epp.epp_id
+                              join app_data.http_request_method hrm on ep.hrm_id = hrm.hrm_id
                           )
          where
                tnt.tnt_id       = v_tnt_id
            and asm.asm_s2c_dflt = true
-           and eppacs.epp_pt    = '/web/core/unauth/saml2/acs'
-           and hrmacs.hrm_nm    = 'POST'
-           and eppmtd.epp_pt    = '/web/core/unauth/saml2/metadata.xml'
-           and hrmmtd.hrm_nm    = 'GET'
-             ;
-
-        insert
-          into
-               app_data.web_app_user_saml2_cert_config
-               (
-                   tnt_id
-               ,   s2g_crt_cn
-               ,   s2g_crt_org
-               )
-        select
-               tnt.tnt_id   tnt_id
-             , tnt.tnt_fqdn s2g_crt_cn
-             , tnt.tnt_nm   s2g_crt_org
-          from
-               app_data.tenant tnt
-         where
-               tnt.tnt_id = v_tnt_id
+           and epp.epp_pt       = '/web/core/unauth/saml2/acs'
+           and hrm.hrm_nm       = 'POST'
              ;
 
         insert

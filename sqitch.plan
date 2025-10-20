@@ -52,7 +52,6 @@ schema_web_core_unauth_otp_aur_inf                           2025-09-02T13:21:42
 schema_web_core_unauth_otp_aur_mod                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_unauth_otp_ssn_aur_mod                       2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_unauth_saml2_acs_inf                         2025-10-12T19:54:32Z AH <xxx@gmail.com> # SAML2 ACS endpoint
-schema_web_core_unauth_saml2_mde_inf                         2025-09-11T15:27:38Z AH <xxx@gmail.com> # SAML2 metadata
 schema_web_core_unauth_ssn_ep_inf                            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_all_core_unauth_tnt_all_inf                             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_api_core_auth_tnt_all_reg                               2025-09-10T19:30:37Z AH <xxx@gmail.com> # Add tenants
@@ -100,7 +99,6 @@ role_web_core_unauth_rts_web_inf                             2025-09-02T13:21:42
 role_web_core_auth_s2c_tnt_inf                               2025-09-15T17:03:58Z AH <xxx@gmail.com> # SAML2 config
 role_web_core_auth_s2c_tnt_mod                               2025-09-15T17:04:02Z AH <xxx@gmail.com> # SAML2 config
 role_web_core_unauth_saml2_acs_inf                           2025-10-12T19:54:52Z AH <xxx@gmail.com> # SAML2 ACS endpoint
-role_web_core_unauth_saml2_mde_inf                           2025-09-11T15:27:47Z AH <xxx@gmail.com> # SAML2 metadata
 role_web_core_unauth_ssn_ep_inf                              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_api                                                    2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_api_app_user                                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -152,7 +150,6 @@ table_saml2_identity_provider_certificate_use                2025-09-30T20:19:21
 table_saml2_identity_provider_metadata_endpoint              2025-09-08T12:40:15Z AH <xxx@gmail.com> # IDP Metadata endpoints
 table_saml2_identity_provider_slo_endpoint                   2025-09-07T20:27:20Z AH <xxx@gmail.com> # IDP SLO endpoint
 table_saml2_identity_provider_sso_endpoint                   2025-09-07T20:27:16Z AH <xxx@gmail.com> # IDP SSO endpoint
-table_saml2_service_provider_certificate_pair                2025-09-10T13:58:11Z AH <xxx@gmail.com> # SAML2 SP info
 table_tenant                                                 2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_web_app_user                                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_web_app_user_atn_method                                2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -168,7 +165,6 @@ table_web_app_user_passkey_login_session                     2025-09-02T13:21:42
 table_web_app_user_passkey_registration_session              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_web_app_user_password                                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_web_app_user_password_config                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-table_web_app_user_saml2_cert_config                         2025-09-18T13:10:15Z AH <xxx@gmail.com> # X509 cert values
 table_web_app_user_saml2_config                              2025-09-08T13:15:36Z AH <xxx@gmail.com> # SAML2 config
 table_web_app_user_totp                                      2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 table_web_app_user_totp_nonce                                2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -188,7 +184,6 @@ indices_saml2_identity_provider                              2025-10-08T04:50:57
 indices_saml2_identity_provider_metadata_endpoint            2025-10-16T11:00:11Z AH <xxx@gmail.com> # enforce 1 x enabled per idp
 indices_saml2_identity_provider_slo_endpoint                 2025-10-08T05:24:18Z AH <xxx@gmail.com> # only 1 active endpoint
 indices_saml2_identity_provider_sso_endpoint                 2025-10-08T04:56:42Z AH <xxx@gmail.com> # only 1 active endpoint
-indices_saml2_service_provider_certificate_pair              2025-09-20T20:08:24Z AH <xxx@gmail.com> # One enabled cert pair
 indices_app_data_web_app_user_totp                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 indices_web_app_user_passkey                                 2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 indices_web_atn_method                                       2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -221,7 +216,6 @@ constraints_saml2_identity_provider_certificate              2025-09-28T21:27:53
 constraints_saml2_identity_provider_metadata_endpoint        2025-09-08T12:43:18Z AH <xxx@gmail.com> # IDP Metadata endpoints
 constraints_saml2_identity_provider_slo_endpoint             2025-09-07T20:29:58Z AH <xxx@gmail.com> # IDP SLO endpoint
 constraints_saml2_identity_provider_sso_endpoint             2025-09-07T20:30:09Z AH <xxx@gmail.com> # IDP SSL endpoint
-constraints_saml2_service_provider_certificate_pair          2025-09-11T07:57:44Z AH <xxx@gmail.com> # SAML2 SP certs
 constraints_web_app_user                                     2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 constraints_web_app_user_atn_method                          2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 constraints_web_app_user_home_page                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -236,7 +230,6 @@ constraints_web_app_user_passkey_login_session               2025-09-02T13:21:42
 constraints_web_app_user_passkey_registration_session        2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 constraints_web_app_user_password                            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 constraints_web_app_user_password_config                     2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-constraints_web_app_user_saml2_cert_config                   2025-09-18T13:10:25Z AH <xxx@gmail.com> # X509 cert values
 constraints_web_app_user_saml2_config                        2025-09-08T13:17:16Z AH <xxx@gmail.com> # SAML2 config
 constraints_web_app_user_totp                                2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 constraints_web_app_user_totp_nonce                          2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -298,17 +291,10 @@ function_web_core_auth_s2c_tnt_inf_idp_inf                   2025-10-02T11:19:15
 function_web_core_auth_s2c_tnt_inf_ref_inf                   2025-09-17T16:51:17Z AH <xxx@gmail.com> # NV pair data for SAML2 config
 function_web_core_auth_s2c_tnt_inf_s2c_inf                   2025-09-09T16:58:20Z AH <xxx@gmail.com> # Retrieve SAML2 information
 function_web_core_auth_s2c_tnt_inf_s2c_uts_inf               2025-09-17T19:56:28Z AH <xxx@gmail.com> # Get UTS from s2c
-function_web_core_auth_s2c_tnt_inf_s2g_inf                   2025-09-18T14:34:05Z AH <xxx@gmail.com> # Cert defaults
-function_web_core_auth_s2c_tnt_inf_s2g_uts_inf               2025-09-18T14:34:14Z AH <xxx@gmail.com> # Cert defaults
-function_web_core_auth_s2c_tnt_inf_spc_inf                   2025-09-20T17:16:40Z AH <xxx@gmail.com> # Register new cert pairs
 function_web_core_auth_s2c_tnt_mod_idp_val                   2025-10-02T12:08:22Z AH <xxx@gmail.com> # Manage IDPs
 function_web_core_auth_s2c_tnt_mod_row_idp_inf               2025-10-02T11:47:38Z AH <xxx@gmail.com> # Manage IDPs
 function_web_core_auth_s2c_tnt_mod_row_idp_mod               2025-10-02T11:59:26Z AH <xxx@gmail.com> # Manage IDPs
 function_web_core_auth_s2c_tnt_mod_row_idp_val               2025-10-02T12:03:06Z AH <xxx@gmail.com> # Manage IDPs
-function_web_core_auth_s2c_tnt_mod_row_spc_inf               2025-09-24T12:37:32Z AH <xxx@gmail.com> # Modify individual cert
-function_web_core_auth_s2c_tnt_mod_row_spc_mod               2025-09-24T12:37:37Z AH <xxx@gmail.com> # Modify individual cert
-function_web_core_auth_s2c_tnt_mod_row_spc_val               2025-09-25T12:43:27Z AH <xxx@gmail.com> # Validate SPC records
-function_web_core_auth_s2c_tnt_mod_spc_val                   2025-09-20T17:16:21Z AH <xxx@gmail.com> # Register new cert pairs
 function_web_core_auth_ssn_aur_inf_aur_inf                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_auth_ssn_tnt_inf_ssn_inf                   2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_unauth_oidc_call_inf_call_inf              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -329,7 +315,6 @@ function_web_core_unauth_otp_aur_mod_otp_inf                 2025-09-02T13:21:42
 function_web_core_unauth_otp_ssn_aur_mod_aur_inf             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_unauth_otp_ssn_aur_mod_nnc_inf             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_unauth_saml2_acs_inf_acs_inf               2025-10-11T19:59:05Z AH <xxx@gmail.com> # data for ACS endpoint
-function_web_core_unauth_saml2_mde_inf_mde_inf               2025-09-11T15:28:46Z AH <xxx@gmail.com> # SAML2 metadata
 function_web_core_unauth_ssn_aur_reg_aukc_atn_inf            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_unauth_ssn_aur_reg_aum_inf                 2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 function_web_core_unauth_ssn_aur_reg_aur_pky_inf             2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -364,13 +349,9 @@ procedure_web_core_auth_pwd_aur_tnt_mod_mod_pwd              2025-09-02T13:21:42
 procedure_web_core_auth_rol_aur_tnt_mod_mod_rol              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_web_core_auth_rol_grp_tnt_mod_mod_rol              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_web_core_auth_s2c_tnt_mod_del_idp                  2025-09-09T17:01:28Z AH <xxx@gmail.com> # Modify IDPs config
-procedure_web_core_auth_s2c_tnt_mod_del_spc                  2025-09-20T17:16:50Z AH <xxx@gmail.com> # Register new cert pairs
 procedure_web_core_auth_s2c_tnt_mod_mod_s2c                  2025-09-09T16:57:34Z AH <xxx@gmail.com> # Create SAML2 config
-procedure_web_core_auth_s2c_tnt_mod_mod_s2g                  2025-09-18T14:34:34Z AH <xxx@gmail.com> # Cert defaults
 procedure_web_core_auth_s2c_tnt_mod_reg_idp                  2025-09-09T17:01:56Z AH <xxx@gmail.com> # Register new IDP
-procedure_web_core_auth_s2c_tnt_mod_reg_spc                  2025-09-20T17:13:50Z AH <xxx@gmail.com> # Register new cert pairs
 procedure_web_core_auth_s2c_tnt_mod_row_mod_idp              2025-10-02T12:37:47Z AH <xxx@gmail.com> # mod IDP
-procedure_web_core_auth_s2c_tnt_mod_row_mod_spc              2025-09-24T12:51:59Z AH <xxx@gmail.com> # Modify one saml2 cert pair
 procedure_web_core_auth_ssn_aur_end_end_ssn                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_web_core_auth_ssn_tnt_del_del_ssn                  2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 procedure_web_core_unauth_oidc_callback_mod_reg_aur          2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
