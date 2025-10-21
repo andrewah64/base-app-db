@@ -1,4 +1,4 @@
-create or replace function web_core_unauth_saml2_acs_inf.acs_inf
+create or replace function web_core_unauth_saml2_acs_mod.acs_inf
 (
         refcursor
 ,       p_tnt_id app_data.tenant.tnt_id%type

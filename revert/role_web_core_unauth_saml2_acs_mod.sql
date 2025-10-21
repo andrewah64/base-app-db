@@ -1,0 +1,3 @@
+revoke usage on schema web_core_unauth_saml2_acs_mod from role_web_core_unauth_saml2_acs_mod;
+
+drop role if exists role_web_core_unauth_saml2_acs_mod;

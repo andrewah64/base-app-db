@@ -1,1 +1,1 @@
-drop index if exists app_data.uk_sso_enabled;
+drop index if exists app_data.uk_slo_enabled;

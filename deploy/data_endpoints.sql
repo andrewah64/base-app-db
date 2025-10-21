@@ -65,7 +65,7 @@ begin
 
         call all_core_unauth_ep_all_reg.reg_ep
         (
-                p_dbrl_nm   => 'role_web_core_unauth_saml2_acs_inf'
+                p_dbrl_nm   => 'role_web_core_unauth_saml2_acs_mod'
         ,       p_dbrl_ds   => 'SAML2 ACS'
         ,       p_dbrl_md   => false
         ,       p_dbrl_type => 'web'
@@ -84,7 +84,7 @@ begin
         ,       p_dbrl_ds   => 'Get OIDC provider information'
         ,       p_dbrl_md   => false
         ,       p_dbrl_type => 'web'
-        ,       p_hdlr_nm   => 'web.core.oidc.Call'
+        ,       p_hdlr_nm   => 'web.core.unauth.oidc.Call'
         ,       p_epp_pt    => '/web/core/unauth/oidc/{nm}'
         ,       p_ep_ds     => 'Action: initiate OIDC flow'
         ,       p_mwc_nm    => 'web/unauth'
@@ -99,7 +99,7 @@ begin
         ,       p_dbrl_ds   => 'Handle OIDC callback'
         ,       p_dbrl_md   => false
         ,       p_dbrl_type => 'web'
-        ,       p_hdlr_nm   => 'web.core.oidc.Callback'
+        ,       p_hdlr_nm   => 'web.core.unauth.oidc.Callback'
         ,       p_epp_pt    => '/web/core/unauth/oidc/callback/{nm}'
         ,       p_ep_ds     => 'Action: handle OIDC callback'
         ,       p_mwc_nm    => 'web/unauth'

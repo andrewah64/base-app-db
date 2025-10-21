@@ -1,4 +1,4 @@
-create or replace procedure web_core_unauth_oidc_callback_mod.reg_aur
+create or replace procedure web_core_unauth_saml2_acs_mod.reg_aur
 (
         p_tnt_id app_data.tenant.tnt_id%type
 ,       p_aur_ea app_data.app_user_email_address.aur_ea%type
@@ -41,7 +41,7 @@ begin
         get diagnostics v_cnt = row_count;
 
         if v_cnt != 1 then
-                raise exception 'Failure: web_core_unauth_oidc_callback_mod.reg_aur' using detail = 'app_user record not created';
+                raise exception 'Failure: web_core_unauth_saml2_acs_mod.reg_aur' using detail = 'app_user record not created';
         end if;
 
         insert
@@ -57,7 +57,7 @@ begin
                );
 
         if v_cnt != 1 then
-                raise exception 'Failure: web_core_unauth_oidc_callback_mod.reg_aur' using detail = 'app_user_email_address record not created';
+                raise exception 'Failure: web_core_unauth_saml2_acs_mod.reg_aur' using detail = 'app_user_email_address record not created';
         end if;
 
            insert
@@ -73,7 +73,7 @@ begin
         get diagnostics v_cnt = row_count;
 
         if v_cnt != 1 then
-                raise exception 'Failure: web_core_unauth_oidc_callback_mod.reg_aur' using detail = 'web_app_user record not created';
+                raise exception 'Failure: web_core_unauth_saml2_acs_mod.reg_aur' using detail = 'web_app_user record not created';
         end if;
 
            insert
@@ -95,7 +95,7 @@ begin
         get diagnostics v_cnt = row_count;
 
         if v_cnt != 1 then
-                raise exception 'Failure: web_core_unauth_oidc_callback_mod.reg_aur' using detail = 'web_app_user_home_page record not created';
+                raise exception 'Failure: web_core_unauth_saml2_acs_mod.reg_aur' using detail = 'web_app_user_home_page record not created';
         end if;
 
            insert
@@ -115,7 +115,7 @@ begin
         get diagnostics v_cnt = row_count;
 
         if v_cnt != 1 then
-                raise exception 'Failure: web_core_unauth_oidc_callback_mod.reg_aur' using detail = 'api_app_user record not created';
+                raise exception 'Failure: web_core_unauth_saml2_acs_mod.reg_aur' using detail = 'api_app_user record not created';
         end if;
 
            insert
@@ -137,7 +137,7 @@ begin
         get diagnostics v_cnt = row_count;
 
         if v_cnt != 1 then
-                raise exception 'Failure: web_core_unauth_oidc_callback_mod.reg_aur' using detail = 'api_app_user_atn_method record not created';
+                raise exception 'Failure: web_core_unauth_saml2_acs_mod.reg_aur' using detail = 'api_app_user_atn_method record not created';
         end if;
 
            insert
@@ -153,13 +153,14 @@ begin
              from
                   app_data.web_atn_method wam
             where
-                  wam.wam_ocp = true
+                  wam.wam_s2i = true
+               or wam.wam_s2s = true
                 ;
 
         get diagnostics v_cnt = row_count;
 
-        if v_cnt != 1 then
-                raise exception 'Failure: web_core_unauth_oidc_callback_mod.reg_aur' using detail = 'web_app_user_atn_method record not created';
+        if v_cnt = 0 then
+                raise exception 'Failure: web_core_unauth_saml2_acs_mod.reg_aur' using detail = 'web_app_user_atn_method record not created';
         end if;
 
         insert
@@ -230,7 +231,7 @@ begin
         get diagnostics v_cnt = row_count;
 
         if v_cnt != 1 then
-                raise exception 'Failure: web_core_unauth_oidc_callback_mod.reg_aur' using detail = 'app_group_user record not created';
+                raise exception 'Failure: web_core_unauth_saml2_acs_mod.reg_aur' using detail = 'app_group_user record not created';
         end if;
 
 end;

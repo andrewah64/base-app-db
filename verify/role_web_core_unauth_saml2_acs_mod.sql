@@ -2,5 +2,5 @@ do $$
 begin
         assert((select count(*)
                   from app_data.db_role
-                 where dbrl_nm = 'role_web_core_unauth_saml2_acs_inf') = 1);
+                 where dbrl_nm = 'role_web_core_unauth_saml2_acs_mod') = 1);
 end $$
