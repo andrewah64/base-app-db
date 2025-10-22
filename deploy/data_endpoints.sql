@@ -532,12 +532,12 @@ begin
 
         call all_core_unauth_ep_all_reg.reg_ep
         (
-                p_dbrl_nm     => 'role_web_core_auth_aukc_tnt_inf'
+                p_dbrl_nm     => 'role_web_core_auth_aupc_tnt_inf'
         ,       p_dbrl_ds     => 'View username/password configuration'
         ,       p_dbrl_md     => false
         ,       p_dbrl_type   => 'web'
-        ,       p_hdlr_nm     => 'web.core.auth.aukc.tnt.Get'
-        ,       p_epp_pt      => '/web/core/auth/aukc/tnt'
+        ,       p_hdlr_nm     => 'web.core.auth.aupc.tnt.Get'
+        ,       p_epp_pt      => '/web/core/auth/aupc/tnt'
         ,       p_ep_ds       => 'Screen: username/password configuration management'
         ,       p_mwc_nm      => 'web/auth'
         ,       p_hrm_nm      => 'GET'
@@ -549,12 +549,12 @@ begin
 
         call all_core_unauth_ep_all_reg.reg_ep
         (
-                p_dbrl_nm     => 'role_web_core_auth_aukc_tnt_mod'
+                p_dbrl_nm     => 'role_web_core_auth_aupc_tnt_mod'
         ,       p_dbrl_ds     => 'Manage username/password configuration'
         ,       p_dbrl_md     => false
         ,       p_dbrl_type   => 'web'
-        ,       p_hdlr_nm     => 'web.core.auth.aukc.tnt.Patch'
-        ,       p_epp_pt      => '/web/core/auth/aukc/tnt'
+        ,       p_hdlr_nm     => 'web.core.auth.aupc.tnt.Patch'
+        ,       p_epp_pt      => '/web/core/auth/aupc/tnt'
         ,       p_ep_ds       => 'Screen: username/password configuration management'
         ,       p_mwc_nm      => 'web/auth'
         ,       p_hrm_nm      => 'PATCH'
@@ -566,12 +566,12 @@ begin
 
         call all_core_unauth_ep_all_reg.reg_ep
         (
-                p_dbrl_nm     => 'role_web_core_auth_aupc_tnt_inf'
+                p_dbrl_nm     => 'role_web_core_auth_aukc_tnt_inf'
         ,       p_dbrl_ds     => 'View passkey configuration'
         ,       p_dbrl_md     => false
         ,       p_dbrl_type   => 'web'
-        ,       p_hdlr_nm     => 'web.core.auth.aupc.tnt.Get'
-        ,       p_epp_pt      => '/web/core/auth/aupc/tnt'
+        ,       p_hdlr_nm     => 'web.core.auth.aukc.tnt.Get'
+        ,       p_epp_pt      => '/web/core/auth/aukc/tnt'
         ,       p_ep_ds       => 'Screen: passkey configuration management'
         ,       p_mwc_nm      => 'web/auth'
         ,       p_hrm_nm      => 'GET'
@@ -583,12 +583,12 @@ begin
 
         call all_core_unauth_ep_all_reg.reg_ep
         (
-                p_dbrl_nm     => 'role_web_core_auth_aupc_tnt_mod'
+                p_dbrl_nm     => 'role_web_core_auth_aukc_tnt_mod'
         ,       p_dbrl_ds     => 'Manage passkey configuration'
         ,       p_dbrl_md     => false
         ,       p_dbrl_type   => 'web'
-        ,       p_hdlr_nm     => 'web.core.auth.aupc.tnt.Patch'
-        ,       p_epp_pt      => '/web/core/auth/aupc/tnt'
+        ,       p_hdlr_nm     => 'web.core.auth.aukc.tnt.Patch'
+        ,       p_epp_pt      => '/web/core/auth/aukc/tnt'
         ,       p_ep_ds       => 'Screen: passkey configuration management'
         ,       p_mwc_nm      => 'web/auth'
         ,       p_hrm_nm      => 'PATCH'
