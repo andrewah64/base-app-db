@@ -1,22 +1,25 @@
 create or replace procedure all_core_unauth_ep_all_reg.reg_ep
 (
-        p_dbrl_nm   app_data.db_role.dbrl_nm%type
-,       p_dbrl_ds   app_data.db_role.dbrl_ds%type
-,       p_dbrl_md   app_data.db_role.dbrl_md%type
-,       p_dbrl_type text
-,       p_hdlr_nm   app_data.handler.hdlr_nm%type
-,       p_epp_pt    app_data.endpoint_path.epp_pt%type
-,       p_ep_ds     app_data.endpoint.ep_ds%type
-,       p_mwc_nm    app_data.middleware_chain.mwc_nm%type
-,       p_hrm_nm    app_data.http_request_method.hrm_nm%type
-,       p_pg_nm     app_data.page.pg_nm%type
-,       pe_is_entry app_data.page_endpoint.pe_is_entry%type
+        p_dbrl_nm     app_data.db_role.dbrl_nm%type
+,       p_dbrl_ds     app_data.db_role.dbrl_ds%type
+,       p_dbrl_md     app_data.db_role.dbrl_md%type
+,       p_dbrl_type   text
+,       p_hdlr_nm     app_data.handler.hdlr_nm%type
+,       p_epp_pt      app_data.endpoint_path.epp_pt%type
+,       p_ep_ds       app_data.endpoint.ep_ds%type
+,       p_mwc_nm      app_data.middleware_chain.mwc_nm%type
+,       p_hrm_nm      app_data.http_request_method.hrm_nm%type
+,       p_pg_nm       app_data.page.pg_nm%type
+,       p_is_hpg      boolean
+,       p_pg_aur_dflt boolean
+,       pe_is_entry   app_data.page_endpoint.pe_is_entry%type
 )
 as
 $$
 declare
         v_dbrl_id app_data.db_role.dbrl_id%type;
         v_ep_id   app_data.endpoint.ep_id%type;
+        v_pg_id   app_data.page.pg_id%type;
 begin
         if p_dbrl_nm is not null then
 
@@ -267,7 +270,33 @@ begin
                                              app_data.page pg
                                        where
                                              pg.pg_nm = p_pg_nm
-                                  );
+                                  )
+                returning
+                          pg_id
+                     into
+                          v_pg_id;
+
+                if p_is_hpg = true and v_pg_id is not null then
+                        insert
+                          into
+                               app_data.home_page
+                             (
+                                 pg_id
+                             ,   pg_aur_dflt
+                             )
+                        select
+                               v_pg_id
+                             , p_pg_aur_dflt
+                         where
+                               not exists (
+                                              select
+                                                     null
+                                                from
+                                                     app_data.home_page
+                                               where
+                                                     pg_id = v_pg_id
+                                          );
+                end if;
 
                 insert
                   into

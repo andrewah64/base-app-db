@@ -371,8 +371,6 @@ data_api_db_role                                             2025-09-02T13:21:42
 data_log_level                                               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 data_middleware_chain                                        2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 data_http_request_method                                     2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-data_page                                                    2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
-data_home_page                                               2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 data_atn_method                                              2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 data_api_atn_method                                          2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 data_web_atn_method                                          2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
