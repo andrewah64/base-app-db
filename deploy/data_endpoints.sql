@@ -1161,6 +1161,23 @@ begin
 
         call all_core_unauth_ep_all_reg.reg_ep
         (
+                p_dbrl_nm     => 'role_web_core_auth_org_tnt_inf'
+        ,       p_dbrl_ds     => 'Manage organisations'
+        ,       p_dbrl_md     => false
+        ,       p_dbrl_type   => 'web'
+        ,       p_hdlr_nm     => 'web.core.auth.org.tnt.Get'
+        ,       p_epp_pt      => '/web/core/auth/org/tnt'
+        ,       p_ep_ds       => 'Screen: manage organisations'
+        ,       p_mwc_nm      => 'web/auth'
+        ,       p_hrm_nm      => 'GET'
+        ,       p_pg_nm       => 'Search organisations'
+        ,       p_is_hpg      => true
+        ,       p_pg_aur_dflt => false
+        ,       pe_is_entry   => true
+        );
+
+        call all_core_unauth_ep_all_reg.reg_ep
+        (
                 p_dbrl_nm     => null
         ,       p_dbrl_ds     => null
         ,       p_dbrl_md     => false

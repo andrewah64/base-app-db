@@ -33,6 +33,10 @@ schema_web_core_auth_log_ep_tnt_inf                          2025-09-02T13:21:42
 schema_web_core_auth_log_ep_tnt_mod                          2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_auth_occ_tnt_inf                             2025-09-15T14:50:05Z AH <xxx@gmail.com> # OIDC config
 schema_web_core_auth_occ_tnt_mod                             2025-09-15T14:50:09Z AH <xxx@gmail.com> # OIDC config
+schema_web_core_auth_org_tnt_del                             2025-11-13T22:25:58Z AH <xxx@gmail.com> # Org mgmt
+schema_web_core_auth_org_tnt_inf                             2025-11-13T22:25:26Z AH <xxx@gmail.com> # Org mgmt
+schema_web_core_auth_org_tnt_mod                             2025-11-13T22:25:37Z AH <xxx@gmail.com> # Org mgmt
+schema_web_core_auth_org_tnt_reg                             2025-11-13T22:25:41Z AH <xxx@gmail.com> # Org mgmt
 schema_web_core_auth_pwd_aur_tnt_mod                         2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_auth_rol_aur_tnt_mod                         2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 schema_web_core_auth_rol_grp_tnt_inf                         2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
@@ -80,6 +84,10 @@ role_web_core_auth_log_ep_tnt_inf                            2025-09-02T13:21:42
 role_web_core_auth_log_ep_tnt_mod                            2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_web_core_auth_occ_tnt_inf                               2025-09-15T17:03:42Z AH <xxx@gmail.com> # OIDC config
 role_web_core_auth_occ_tnt_mod                               2025-09-15T17:03:46Z AH <xxx@gmail.com> # OIDC config
+role_web_core_auth_org_tnt_del                               2025-11-13T22:26:31Z AH <xxx@gmail.com> # Org mgmt
+role_web_core_auth_org_tnt_inf                               2025-11-13T22:26:10Z AH <xxx@gmail.com> # Org mgmt
+role_web_core_auth_org_tnt_mod                               2025-11-13T22:26:19Z AH <xxx@gmail.com> # Org mgmt
+role_web_core_auth_org_tnt_reg                               2025-11-13T22:26:25Z AH <xxx@gmail.com> # Org mgmt
 role_web_core_auth_pwd_aur_tnt_mod                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_web_core_auth_rol_aur_tnt_mod                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
 role_web_core_auth_rol_grp_tnt_inf                           2025-09-02T13:21:42Z AH <xxx@gmail.com> # Initial commit
